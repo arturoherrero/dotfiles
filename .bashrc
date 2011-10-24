@@ -1,0 +1,8 @@
+
+JAVA_HOME="/opt/java"
+GROOVY_HOME="/opt/groovy"
+GRAILS_HOME="/opt/grails"
+GANT_HOME="/opt/gant"
+PATH="$PATH:$JAVA_HOME/bin:$GROOVY_HOME/bin:$GRAILS_HOME/bin:$GANT_HOME/bin"
+export JAVA_HOME GROOVY_HOME GRAILS_HOME PATH
+
