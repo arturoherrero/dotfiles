@@ -22,3 +22,6 @@ DIR="\W"
 export PS1="${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
 
 
+#EDITOR
+export EDITOR=vim
+
