@@ -1,4 +1,4 @@
-
+# Environment variables
 JAVA_HOME="/opt/java"
 GROOVY_HOME="/opt/groovy"
 GRAILS_HOME="/opt/grails"
@@ -7,7 +7,7 @@ PATH="$PATH:$JAVA_HOME/bin:$GROOVY_HOME/bin:$GRAILS_HOME/bin:$GANT_HOME/bin"
 export JAVA_HOME GROOVY_HOME GRAILS_HOME PATH
 
 
-#PS1
+# PS1
 RED="\[\e[0;31m\]"
 BLUE="\[\e[0;34m\]"
 CYAN="\[\e[0;36m\]"
@@ -22,6 +22,15 @@ DIR="\W"
 export PS1="${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
 
 
-#EDITOR
+# EDITOR
 export EDITOR=vim
+
+
+# SVN Hacks
+alias svndel="svn st | grep ^? | awk '{print \"rm -rf \" \$2}' | sh"
+svndiff()
+{
+    svn diff "${@}" | colordiff
+}
+
 
