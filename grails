@@ -1,0 +1,7 @@
+#!/bin/bash
+
+GRAILS_VERSION=`grep app.grails.version application.properties | cut -d'=' -f2`
+GRAILS_HOME="/opt/grails-$GRAILS_VERSION"
+
+export GRAILS_HOME
+$GRAILS_HOME/bin/grails $*
