@@ -1,9 +1,16 @@
 # Environment variables
 JAVA_HOME="/opt/java"
+
 GROOVY_HOME="/opt/groovy"
 GRAILS_HOME="/opt/grails"
 GANT_HOME="/opt/gant"
-PATH="$PATH:$JAVA_HOME/bin:$GROOVY_HOME/bin:$GRAILS_HOME/bin:$GANT_HOME/bin"
+
+SCALA_HOME="/opt/scala"
+
+CLOJURE_HOME="/opt/clojure"
+alias clojure="java -jar $CLOJURE_HOME/clojure.jar"
+
+PATH="$JAVA_HOME/bin:$PATH:$GROOVY_HOME/bin:$GRAILS_HOME/bin:$GANT_HOME/bin:$SCALA_HOME/bin"
 export JAVA_HOME GROOVY_HOME GRAILS_HOME PATH
 
 
