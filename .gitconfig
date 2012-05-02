@@ -1,0 +1,9 @@
+[user]
+	name = Arturo Herrero
+	email = arturo.herrero@gmail.com
+[color]
+	ui = auto
+[alias]
+	st = status
+	co = checkout
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
