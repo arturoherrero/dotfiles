@@ -15,6 +15,7 @@ export JAVA_HOME GROOVY_HOME GRAILS_HOME PATH
 
 
 # PS1
+ESCAPE="\[\e[G\]"
 RED="\[\e[0;31m\]"
 BLUE="\[\e[0;34m\]"
 CYAN="\[\e[0;36m\]"
@@ -26,7 +27,7 @@ HOST="\h"
 USER="\u"
 DIR="\W"
 
-export PS1="${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
+export PS1="${ESCAPE}${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
 
 
 # EDITOR
