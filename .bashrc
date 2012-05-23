@@ -39,7 +39,7 @@ alias svndel="svn st | grep ^? | awk '{print \"rm -rf \" \$2}' | sh"
 alias svnadd="svn --force --depth infinity add ."
 svndiff()
 {
-    svn diff "$@" | colordiff
+    svn diff $@ | colordiff
 }
 
 
