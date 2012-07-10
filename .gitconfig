@@ -7,3 +7,5 @@
 	st = status
 	co = checkout
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[core]
+	excludesfile = ~/.gitignore
