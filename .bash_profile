@@ -23,7 +23,7 @@ export EDITOR=vim
 
 
 # GIT
-source .git-completion.bash
+source ~/.git-completion.bash
 
 
 # RVM
