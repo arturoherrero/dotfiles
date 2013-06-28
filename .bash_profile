@@ -18,6 +18,10 @@ DIR="\W"
 export PS1="${ESCAPE}${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
 
 
+# Shopt Builtin
+shopt -s autocd cdspell dirspell globstar
+
+
 # EDITOR
 export EDITOR=vim
 
