@@ -28,6 +28,7 @@ export EDITOR=vim
 
 # GIT
 source ~/.git-completion.bash
+eval "$(hub alias -s)"
 
 
 # Homebrew
