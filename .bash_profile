@@ -19,7 +19,13 @@ export PS1="${ESCAPE}${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
 
 
 # Shopt Builtin
-shopt -s autocd cdspell dirspell globstar
+shopt -s autocd cdspell dirspell globstar histappend
+
+
+# History
+export HISTSIZE=10000
+export HISTFILESIZE=10000
+export HISTCONTROL=ignoreboth
 
 
 # EDITOR
