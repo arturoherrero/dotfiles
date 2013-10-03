@@ -4,6 +4,9 @@ syntax on
 " Show line numbers
 set number
 
+" Jumps to search word as you type
+set incsearch
+
 " Becomming root to save a document, just type `w!!`
 cmap w!! %!sudo tee > /dev/null %
 
