@@ -29,3 +29,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on
+
+" Show hidden files NERDTree
+let NERDTreeShowHidden=1
