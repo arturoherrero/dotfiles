@@ -12,3 +12,17 @@ cmap w!! %!sudo tee > /dev/null %
 
 " Markdown highlighting (default only for *.markdown files)
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Vundle
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'wincent/Command-T'
+Bundle 'scrooloose/nerdtree'
+Bundle 'altercation/vim-colors-solarized'
+
+filetype plugin indent on
