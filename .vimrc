@@ -13,6 +13,9 @@ cmap w!! %!sudo tee > /dev/null %
 " Markdown highlighting (default only for *.markdown files)
 au BufRead,BufNewFile *.md set filetype=markdown
 
+" 80-column indication
+set colorcolumn=80
+
 " Vundle
 set nocompatible
 filetype off
