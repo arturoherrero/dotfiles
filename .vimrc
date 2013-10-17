@@ -16,6 +16,13 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " 80-column indication
 set colorcolumn=80
 
+" Tab is two spaces
+set tabstop=2
+" Indentation is two spaces
+set shiftwidth=2
+" Tab characters entered will be changed to spaces
+set expandtab
+
 " Vundle
 set nocompatible
 filetype off
