@@ -16,6 +16,9 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " 80-column indication
 set colorcolumn=80
 
+" Not wrap lines
+set nowrap
+
 " Tab is two spaces
 set tabstop=2
 " Indentation is two spaces
@@ -39,3 +42,8 @@ filetype plugin indent on
 
 " Show hidden files NERDTree
 let NERDTreeShowHidden=1
+
+" Command-T configuration
+let g:CommandTMaxHeight=20
+" Reload file list before each search
+map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
