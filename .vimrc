@@ -26,6 +26,9 @@ set shiftwidth=2
 " Tab characters entered will be changed to spaces
 set expandtab
 
+" Indentation
+set autoindent
+
 " Vundle
 set nocompatible
 filetype off
@@ -37,6 +40,7 @@ Bundle 'gmarik/vundle'
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-endwise'
 
 filetype plugin indent on
 
