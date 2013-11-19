@@ -48,6 +48,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-endwise'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on
 
