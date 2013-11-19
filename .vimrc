@@ -6,6 +6,13 @@ set number
 
 " Jumps to search word as you type
 set incsearch
+" Highlighting search matches
+set hlsearch
+" Temporarily get out of the highlighted search
+nnoremap <C-l> :nohlsearch<CR><C-l>
+" Automatically highlighting off in insert mode
+autocmd InsertEnter * :setlocal nohlsearch
+autocmd InsertLeave * :setlocal hlsearch
 
 " Becomming root to save a document, just type `w!!`
 cmap w!! %!sudo tee > /dev/null %
