@@ -44,7 +44,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'wincent/Command-T'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-endwise'
@@ -53,8 +53,3 @@ filetype plugin indent on
 
 " Show hidden files NERDTree
 let NERDTreeShowHidden=1
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
-" Reload file list before each search
-map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
