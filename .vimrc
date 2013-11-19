@@ -49,6 +49,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-endwise'
 Bundle 'mileszs/ack.vim'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 filetype plugin indent on
 
