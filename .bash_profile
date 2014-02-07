@@ -39,7 +39,3 @@ eval "$(hub alias -s)"
 
 # Homebrew
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
-
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
