@@ -1,14 +1,19 @@
 [user]
-	name = Arturo Herrero
-	email = arturo.herrero@gmail.com
+  name = Arturo Herrero
+  email = arturo.herrero@gmail.com
 [color]
-	ui = auto
+  ui = auto
 [alias]
-	br = branch
-	co = checkout
-	st = status
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  br = branch
+  ca = git add -A && git commit -v
+  ci = commit
+  co = checkout
+  hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
+  last = log -1 HEAD
+  st = status
+  stats = shortlog -sn
+  unstage = reset HEAD --
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [push]
-	default = simple
+  default = simple
