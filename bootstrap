@@ -12,6 +12,7 @@ brew install autossh
 brew install bash
 brew install git
 brew install htop-osx
+brew install hub
 brew install macvim
 brew install pstree
 brew install tmux
