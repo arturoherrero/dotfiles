@@ -5,7 +5,7 @@
   ui = auto
 [alias]
   br = branch
-  ca = git add -A && git commit -v
+  ca = !git add -A && git commit -v
   ci = commit
   co = checkout
   hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
