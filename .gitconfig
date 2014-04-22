@@ -10,7 +10,7 @@
   co = checkout
   hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
   last = log -1 HEAD
-  st = status
+  st = status -sb
   stats = shortlog -sn
   unstage = reset HEAD --
 [core]
