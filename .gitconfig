@@ -5,13 +5,16 @@
   ui = auto
 [alias]
   br = branch
+  branches = branch -a
   ca = !git add -A && git commit -v
   ci = commit
   co = checkout
   hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
   last = log -1 HEAD
+  remotes = remote -v
   st = status -sb
   stats = shortlog -sn
+  tags = tag -l
   unstage = reset HEAD --
 [core]
   excludesfile = ~/.gitignore
