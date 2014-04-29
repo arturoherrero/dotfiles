@@ -32,7 +32,7 @@ man() {
 
 
 # Shopt Builtin
-shopt -s autocd cdspell dirspell globstar histappend
+shopt -s autocd cdspell cmdhist dirspell globstar histappend
 
 
 # History
