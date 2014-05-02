@@ -12,7 +12,7 @@
   hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
   last = log -1 HEAD
   remotes = remote -v
-  st = status -sb
+  st = status
   stats = shortlog -sn
   tags = tag -l
   unstage = reset HEAD --
