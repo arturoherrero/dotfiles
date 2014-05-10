@@ -60,3 +60,4 @@ source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
 # Alias
 alias sourcetree="open -a SourceTree ."
+alias path="tr ':' '\n' <<< $PATH"
