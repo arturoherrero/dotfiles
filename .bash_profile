@@ -20,6 +20,7 @@ export PS1="${ESCAPE}${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
 
 # Enable colorized output
 export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
 
 
 # Colored man pages
