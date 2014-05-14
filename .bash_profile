@@ -2,9 +2,16 @@
 export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 
 
-# PS1
+# GIT
+source ~/.git-prompt.sh
+source ~/.git-completion.bash
+eval "$(hub alias -s)"
+
+
+# Prompt
 ESCAPE="\[\e[G\]"
 RED="\[\e[0;31m\]"
+GREEN="\[\e[0;32m\]"
 BLUE="\[\e[0;34m\]"
 CYAN="\[\e[0;36m\]"
 PURPLE="\[\e[0;35m\]"
@@ -15,7 +22,13 @@ HOST="\h"
 USER="\u"
 DIR="\W"
 
-export PS1="${ESCAPE}${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}\$ "
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUPSTREAM="auto git"
+export GIT_PS1_DESCRIBE_STYLE="branch"
+export PROMPT_COMMAND='__git_ps1 "${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}" "\$ " "{%s}"'
 
 
 # Enable colorized output
@@ -48,11 +61,6 @@ export HISTCONTROL=ignoreboth
 
 # EDITOR
 export EDITOR=vim
-
-
-# GIT
-source ~/.git-completion.bash
-eval "$(hub alias -s)"
 
 
 # Homebrew
