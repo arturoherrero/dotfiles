@@ -6,6 +6,7 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
 source ~/.git-prompt.sh
 source ~/.git-completion.bash
 eval "$(hub alias -s)"
+source ~/.hub.bash_completion.sh
 
 
 # Prompt
