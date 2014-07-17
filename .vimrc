@@ -58,6 +58,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'mileszs/ack.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'bling/vim-airline'
+Bundle 'valloric/MatchTagAlways'
 
 filetype plugin indent on
 
