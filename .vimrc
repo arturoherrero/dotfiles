@@ -3,12 +3,14 @@ syntax on
 
 " Show line numbers
 set number
+" Switch to hybrid mode with relative numbers, ctrl-n key
+nnoremap <C-n> :set relativenumber!<ENTER>
 
 " Jumps to search word as you type
 set incsearch
 " Highlighting search matches
 set hlsearch
-" Temporarily get out of the highlighted search
+" Temporarily get out of the highlighted search, ctrl-l key
 nnoremap <C-l> :nohlsearch<CR><C-l>
 " Automatically highlighting off in insert mode
 autocmd InsertEnter * :setlocal nohlsearch
