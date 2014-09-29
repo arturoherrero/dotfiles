@@ -69,6 +69,10 @@ export EDITOR=vim
 source `brew --repository`/Library/Contributions/brew_bash_completion.sh
 
 
+# rbenv
+eval "$(rbenv init -)"
+
+
 # Alias
 alias sourcetree="open -a SourceTree ."
 alias path="tr ':' '\n' <<< $PATH"
