@@ -3,14 +3,17 @@ syntax on
 
 " Show line numbers
 set number
-" Switch to hybrid mode with relative numbers, ctrl-n key
+" Switch to hybrid mode with relative numbers, Ctrl-n
 nnoremap <C-n> :set relativenumber!<ENTER>
+
+" Displaying indent levels. Ctrl-i
+nmap <C-i> <Plug>IndentGuidesToggle
 
 " Jumps to search word as you type
 set incsearch
 " Highlighting search matches
 set hlsearch
-" Temporarily get out of the highlighted search, ctrl-l key
+" Temporarily get out of the highlighted search, Ctrl-l
 nnoremap <C-l> :nohlsearch<CR><C-l>
 " Automatically highlighting off in insert mode
 autocmd InsertEnter * :setlocal nohlsearch
@@ -56,6 +59,7 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tpope/vim-endwise'
 Bundle 'mileszs/ack.vim'
 Bundle 'jistr/vim-nerdtree-tabs'
