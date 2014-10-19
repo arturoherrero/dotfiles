@@ -70,3 +70,4 @@ filetype plugin indent on
 
 " Show hidden files NERDTree
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.swp$']
