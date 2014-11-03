@@ -52,10 +52,10 @@ au InsertLeave * match ExtraWhiteSpace /\s\+$/
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
@@ -66,6 +66,7 @@ Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'bling/vim-airline'
 Bundle 'valloric/MatchTagAlways'
 
+call vundle#end()
 filetype plugin indent on
 
 " Show hidden files NERDTree
