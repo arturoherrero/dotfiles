@@ -77,5 +77,6 @@ eval "$(rbenv init -)"
 alias sourcetree="open -a SourceTree ."
 alias path="tr ':' '\n' <<< $PATH"
 alias vi=vim
-alias rspec="bundle exec rspec"
 alias guard="bundle exec guard"
+alias rails="bundle exec rails"
+alias rspec="bundle exec rspec"
