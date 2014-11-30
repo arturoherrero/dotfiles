@@ -56,8 +56,8 @@ shopt -s autocd cdspell cmdhist dirspell globstar histappend
 
 
 # History
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTSIZE=100000
+export HISTFILESIZE=100000
 export HISTCONTROL=ignoreboth
 
 
