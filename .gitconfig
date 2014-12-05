@@ -10,6 +10,7 @@
   ci = commit
   co = checkout
   hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
+  jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
   remotes = remote -v
   st = status
