@@ -75,3 +75,5 @@ filetype plugin indent on
 " Show hidden files NERDTree
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$']
+" Reveal file in NERDTree, Ctrl-a
+nmap <C-a> :NERDTreeFind<CR>
