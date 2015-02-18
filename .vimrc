@@ -1,6 +1,11 @@
 " Turn on color syntax highlighting
 syntax on
 
+" Markdown highlighting (default only for *.markdown files)
+au BufRead,BufNewFile *.md set filetype=markdown
+" Less highlighting
+au BufRead,BufNewFile *.less set filetype=css
+
 " Show line numbers
 set number
 " Switch to hybrid mode with relative numbers, Ctrl-n
@@ -21,11 +26,6 @@ autocmd InsertLeave * :setlocal hlsearch
 
 " Becomming root to save a document, just type `w!!`
 cmap w!! %!sudo tee > /dev/null %
-
-" Markdown highlighting (default only for *.markdown files)
-au BufRead,BufNewFile *.md set filetype=markdown
-" Less highlighting
-au BufRead,BufNewFile *.less set filetype=css
 
 " 80-column indication
 set colorcolumn=80
