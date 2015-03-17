@@ -79,6 +79,7 @@ alias path="tr ':' '\n' <<< $PATH"
 alias vi=vim
 alias guard="bundle exec guard"
 alias rails="bundle exec rails"
+alias rake="bundle exec rake"
 alias rspec="bundle exec rspec"
 
 
