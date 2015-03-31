@@ -17,6 +17,7 @@
   stats = shortlog -sn
   tags = tag -l
   unstage = reset HEAD --
+  up = "!git remote update -p; git merge --ff-only @{u}"
 [core]
   excludesfile = ~/.gitignore
 [push]
