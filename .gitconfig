@@ -4,12 +4,14 @@
 [color]
   ui = auto
 [alias]
+  amend = commit --amend
   br = branch
   branches = branch -a
   ca = !git add -A && git commit -v
   ci = commit
   co = checkout
   cob = checkout -b
+  head = checkout -- .
   hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
   jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
@@ -17,6 +19,7 @@
   st = status
   stats = shortlog -sn
   tags = tag -l
+  undo = reset HEAD^ --mixed
   unstage = reset HEAD --
   up = "!git remote update -p; git merge --ff-only @{u}"
 [core]
