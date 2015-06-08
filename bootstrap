@@ -34,3 +34,7 @@ brew cask install bettertouchtool
 brew cask install google-chrome
 brew cask install macvim
 brew cask install sourcetree
+
+# Bash 4 in OS X
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
