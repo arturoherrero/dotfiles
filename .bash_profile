@@ -1,7 +1,3 @@
-# Environment variables
-export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
-
-
 # GIT
 source ~/.git-prompt.sh
 source ~/.git-completion.bash
@@ -21,7 +17,7 @@ GRAY="\[\e[0;37m\]"
 OFF="\[\e[0m\]"
 
 HOST="\h"
-USER="\u"
+USR="\u"
 DIR="\W"
 
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -30,7 +26,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWUPSTREAM="auto git"
 export GIT_PS1_DESCRIBE_STYLE="branch"
-export PROMPT_COMMAND='__git_ps1 "${GRAY}${USER}@${HOST}:${PURPLE}${DIR}${OFF}" "\$ " "{%s}"'
+export PROMPT_COMMAND='__git_ps1 "${GRAY}${USR}@${HOST}:${PURPLE}${DIR}${OFF}" "\$ " "{%s}"'
 
 
 # Enable colorized output
