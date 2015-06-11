@@ -51,11 +51,13 @@ brew cask install macvim
 brew cask install openemu
 brew cask install osxfuse
 brew cask install psequel
+brew cask install rdio
 brew cask install robomongo
 brew cask install sequel-pro
 brew cask install skype
 brew cask install slack
 brew cask install sourcetree
+brew cask install spotify
 brew cask install sqlitebrowser
 brew cask install the-unarchiver
 brew cask install tomighty
