@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copy .dotfiles to $HOME directory
+find . -name ".*" -type f -maxdepth 1 | xargs -I '{}' cp '{}' ~/
+
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
