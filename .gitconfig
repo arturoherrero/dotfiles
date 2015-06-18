@@ -4,7 +4,7 @@
 [color]
   ui = auto
 [alias]
-  amend = commit --amend
+  amend = commit --amend --no-edit
   br = branch
   branches = branch -a
   ca = !git add -A && git commit -v
