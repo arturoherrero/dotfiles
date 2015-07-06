@@ -5,6 +5,8 @@ syntax on
 au BufRead,BufNewFile *.md set filetype=markdown
 " Less highlighting
 au BufRead,BufNewFile *.less set filetype=css
+" Jbuilder highlighting
+au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
 " Show line numbers
 set number
