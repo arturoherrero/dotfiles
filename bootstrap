@@ -36,6 +36,7 @@ brew cask install alfred
 brew cask install bettertouchtool
 brew cask install caffeine
 brew cask install calibre
+brew cask install chitchat
 brew cask install cloud
 brew cask install dropbox
 brew cask install evernote
@@ -65,7 +66,6 @@ brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
 brew cask install vlc
-brew cask install whatsmac
 
 # Bash 4 in OS X
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
