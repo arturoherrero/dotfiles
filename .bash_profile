@@ -3,7 +3,7 @@ source ~/.git-prompt.sh
 source ~/.git-completion.bash
 eval "$(hub alias -s)"
 source ~/.hub.bash_completion.sh
-source ~/.bitbucket.sh
+source ~/.my_git.sh
 
 
 # Prompt
