@@ -70,14 +70,18 @@ eval "$(rbenv init -)"
 
 
 # Alias
-alias sourcetree="open -a SourceTree ."
+alias find_by_name="find . -type f -name"
 alias path="tr ':' '\n' <<< $PATH"
+alias sourceme="source $HOME/.bash_profile"
 alias vi=vim
+
 alias guard="bundle exec guard"
 alias rails="bundle exec rails"
 alias rake="bundle exec rake"
 alias rake_db_migrate="rake db:migrate && rake db:test:prepare"
 alias rspec="bundle exec rspec"
+
+alias sourcetree="open -a SourceTree ."
 
 
 # OS X
