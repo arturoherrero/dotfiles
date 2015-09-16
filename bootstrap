@@ -16,6 +16,7 @@ brew install hr
 brew install hub
 brew install macvim
 brew install mobile-shell
+brew install nmap
 brew install pstree
 brew install rbenv ruby-build
 brew install tmux
