@@ -81,6 +81,7 @@ alias rake="bundle exec rake"
 alias rake_db_migrate="rake db:migrate && rake db:test:prepare"
 alias rspec="bundle exec rspec"
 
+alias jekyll="jekyll server --watch"
 alias sourcetree="open -a SourceTree ."
 
 
