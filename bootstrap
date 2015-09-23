@@ -11,8 +11,9 @@ brew install ack
 brew install autossh
 brew install bash
 brew install git
-brew install htop-osx
 brew install hr
+brew install htop-osx
+brew install httpie
 brew install hub
 brew install macvim
 brew install mobile-shell
