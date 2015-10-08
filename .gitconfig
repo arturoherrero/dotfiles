@@ -16,6 +16,7 @@
   jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
   remotes = remote -v
+  remove = !git push origin :$1 && git branch -d $1
   st = status
   stats = shortlog -sn
   tags = tag -l
