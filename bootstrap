@@ -78,3 +78,9 @@ chsh -s /usr/local/bin/bash
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# Disable creation of metadata files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Disable creation of metadata files on USB volumes
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
