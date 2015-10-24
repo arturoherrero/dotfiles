@@ -84,3 +84,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable creation of metadata files on USB volumes
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Install all available software updates
+sudo softwareupdate -ia
