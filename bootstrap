@@ -55,7 +55,6 @@ brew cask install macvim
 brew cask install openemu
 brew cask install osxfuse
 brew cask install psequel
-brew cask install rdio
 brew cask install robomongo
 brew cask install sequel-pro
 brew cask install skype
