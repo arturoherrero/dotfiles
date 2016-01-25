@@ -18,7 +18,7 @@
   remotes = remote -v
   remove = !git push origin :$1 && git branch -d $1
   st = status
-  stats = shortlog -sn
+  stats = shortlog -sn --no-merges
   tags = tag -l
   undo = reset HEAD^ --mixed
   unstage = reset HEAD --
