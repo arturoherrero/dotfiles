@@ -12,9 +12,10 @@
   co = checkout
   cob = checkout -b
   head = checkout -- .
-  hist = log --pretty=format:\"%C(auto) %h %s [%an]\" --graph
+  hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
   jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
+  lg = log --graph --pretty=format:'%C(auto) %h %s %C(bold blue)<%an>'
   remotes = remote -v
   remove = !git push origin :$1 && git branch -d $1
   st = status
