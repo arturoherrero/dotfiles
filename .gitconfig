@@ -28,3 +28,7 @@
   excludesfile = ~/.gitignore
 [push]
   default = simple
+[pull]
+	ff = only
+[merge]
+	ff = only
