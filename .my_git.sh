@@ -39,6 +39,10 @@ my_git() {
 
 alias git="my_git $*"
 
+_git_jump() {
+  _git_branch
+}
+
 _git_remove() {
   _git_branch
 }
