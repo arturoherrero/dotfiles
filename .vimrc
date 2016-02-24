@@ -60,16 +60,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-commentary'
-Bundle 'mileszs/ack.vim'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'bling/vim-airline'
-Bundle 'valloric/MatchTagAlways'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-commentary'
+Plugin 'mileszs/ack.vim'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'valloric/MatchTagAlways'
 
 call vundle#end()
 filetype plugin indent on
