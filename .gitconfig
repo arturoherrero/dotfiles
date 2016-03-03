@@ -11,6 +11,7 @@
   ci = commit -v
   co = checkout
   cob = checkout -b
+  discard = "!git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
   head = checkout -- .
   hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
   jump = !git stash && git checkout $1 && shift && git stash pop
