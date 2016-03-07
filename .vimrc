@@ -80,3 +80,6 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$']
 " Reveal file in NERDTree, Ctrl-a
 nmap <C-a> :NERDTreeFind<CR>
+
+" Complete longest common string, then list alternatives.
+set wildmode=longest,list
