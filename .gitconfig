@@ -20,6 +20,8 @@
   remotes = remote -v
   remove = !git push origin :$1 && git branch -d $1
   st = status
+  stashu = stash -u
+  stashp = stash pop
   stats = shortlog -sn --no-merges
   tags = tag -l
   undo = reset HEAD^ --mixed
