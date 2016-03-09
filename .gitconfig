@@ -18,7 +18,7 @@
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
   remotes = remote -v
-  remove = !git push origin :$1 && git branch -d $1
+  remove = !git push origin --delete $1 && git branch -d $1 2>/dev/null
   st = status
   stashu = stash -u
   stashp = stash pop
