@@ -3,8 +3,6 @@ syntax on
 
 " Markdown highlighting (default only for *.markdown files)
 au BufRead,BufNewFile *.md set filetype=markdown
-" Less highlighting
-au BufRead,BufNewFile *.less set filetype=css
 " Jbuilder highlighting
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 
@@ -52,6 +50,12 @@ au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
+" Complete longest common string, then list alternatives.
+set wildmode=longest,list
+
+" Record the last 200 commands
+set history=200
+
 " Vundle
 set nocompatible
 filetype off
@@ -80,6 +84,3 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$']
 " Reveal file in NERDTree, Ctrl-a
 nmap <C-a> :NERDTreeFind<CR>
-
-" Complete longest common string, then list alternatives.
-set wildmode=longest,list
