@@ -75,11 +75,7 @@ eval "$(rbenv init -)"
 
 
 # Alias
-alias find_by_name="find . -type f -name"
-alias path="tr ':' '\n' <<< $PATH"
-alias sourceme="source $HOME/.bash_profile"
 alias vi=vim
-
 alias be="bundle exec"
 alias guard="bundle exec guard"
 alias rails="bundle exec rails"
@@ -88,7 +84,19 @@ alias rake_db_migrate="rake db:migrate && rake db:test:prepare"
 alias rspec="bundle exec rspec"
 alias jekyll="jekyll server --watch"
 
-alias sourcetree="open -a SourceTree ."
+
+# Utils
+alias findit="find . -type f -name"
+alias path="tr ':' '\n' <<< $PATH"
+alias sourceme="source $HOME/.bash_profile"
+
+hashify() {
+  echo $1 | cut -c1-7
+}
+
+killit() {
+  ps aux | grep $1 | awk '{ print $2 }' | xargs kill -9 2>/dev/null
+}
 
 
 # OS X
@@ -100,3 +108,5 @@ cdf() {
     echo 'No Finder window found' >&2
   fi
 }
+
+alias sourcetree="open -a SourceTree ."
