@@ -52,6 +52,10 @@ man() {
 shopt -s autocd cdspell cmdhist dirspell globstar histappend
 
 
+# cd only autocompletes directories
+complete -d cd
+
+
 # History
 export HISTSIZE=100000
 export HISTFILESIZE=100000
