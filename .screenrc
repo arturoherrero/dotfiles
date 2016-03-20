@@ -1,0 +1,4 @@
+# Turn off the annoying startup message
+startup_message off
+
+shell -$SHELL
