@@ -5,6 +5,7 @@ dotfiles_dir() {
 source "$(dotfiles_dir)/system/aliases.sh"
 source "$(dotfiles_dir)/system/environment.sh"
 source "$(dotfiles_dir)/system/git.sh"
+source "$(dotfiles_dir)/system/history.sh"
 source "$(dotfiles_dir)/system/prompt.sh"
 source "$(dotfiles_dir)/system/utils.sh"
 source "$(dotfiles_dir)/system/utilsosx.sh"

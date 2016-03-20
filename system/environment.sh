@@ -15,7 +15,7 @@ man() {
 }
 
 # Shopt Builtin
-shopt -s autocd cdspell cmdhist dirspell globstar histappend
+shopt -s autocd cdspell dirspell globstar
 
 # cd only autocompletes directories
 complete -d cd
@@ -23,11 +23,6 @@ complete -d cd
 # Enable history expansion with space
 # E.g. typing !!<space> will replace the !! with your last command
 bind Space:magic-space
-
-# History
-export HISTSIZE=100000
-export HISTFILESIZE=100000
-export HISTCONTROL=ignoreboth
 
 # EDITOR
 export EDITOR=vim
