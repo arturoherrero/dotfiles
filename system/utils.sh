@@ -24,5 +24,5 @@ alias sourceme="source ~/.profile"
 
 # Update dotfiles
 updateme() {
-  (cd "$dotfiles_path" && git pull)
+  (cd "$(dotfiles_dir)" && git pull)
 }
