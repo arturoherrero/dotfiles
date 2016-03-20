@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Copy .dotfiles to $HOME directory
-find . -name ".*" -type f -maxdepth 1 | xargs -I '{}' cp '{}' ~/
+# Symbolic link with .dotfiles to ~/$HOME directory
+find "$(pwd)" -name ".*" -type f -maxdepth 1 | xargs -I '{}' ln -s '{}' ~
 
 # Install Homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -83,6 +83,9 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Disable creation of metadata files on USB volumes
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
+# Change screenshots format
+defaults write com.apple.screencapture type jpg
 
 # Install all available software updates
 sudo softwareupdate -ia

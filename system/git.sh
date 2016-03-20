@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-
 # $ git browse
 # Open a Bitbucket page in the default browser.
 git_browse() {
@@ -46,3 +44,8 @@ _git_jump() {
 _git_remove() {
   _git_branch
 }
+
+source ~/.git-prompt.sh
+source ~/.git-completion.bash
+eval "$(hub alias -s)"
+source ~/.hub.bash_completion.sh
