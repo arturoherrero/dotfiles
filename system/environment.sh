@@ -14,8 +14,23 @@ man() {
   man "$@"
 }
 
-# Shopt Builtin
-shopt -s autocd cdspell dirspell globstar
+# Prepend cd to directory names automatically
+shopt -s autocd
+
+# This allows you to bookmark your favorite places across the file system
+shopt -s cdable_vars
+
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell
+
+# Correct spelling errors during tab-completion
+shopt -s dirspell
+
+# Turn on recursive globbing (enables ** to recurse all directories)
+shopt -s globstar
+
+# Match filenames in a case-insensitive fashion when performing filename expansion
+shopt -s nocaseglob
 
 # cd only autocompletes directories
 complete -d cd
