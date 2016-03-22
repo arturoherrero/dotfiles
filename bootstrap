@@ -26,6 +26,7 @@ brew install wget
 
 # Vim plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+mvim +PluginInstall +qall
 
 # Bash completions
 curl -fsSL -o ~/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
