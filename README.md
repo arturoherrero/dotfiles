@@ -25,3 +25,8 @@ can just use a shell function anywhere:
 ```shell
 updateme
 ```
+
+## Custom configuration
+
+Using `system/custom.sh` file, I can add any custom configuration that is not
+going to be persisted in the repository.
