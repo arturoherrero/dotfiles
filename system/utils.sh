@@ -16,6 +16,10 @@ mcd() {
   mkdir -p $1 && cd $_
 }
 
+# Time && Date
+alias now='date +"%T"'
+alias nowdate='date +"%d-%m-%Y"'
+
 # Show PATH in a human-readable way
 alias path="tr ':' '\n' <<< $PATH"
 
