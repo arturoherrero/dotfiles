@@ -20,9 +20,5 @@ shopt -s autocd cdspell dirspell globstar
 # cd only autocompletes directories
 complete -d cd
 
-# Enable history expansion with space
-# E.g. typing !!<space> will replace the !! with your last command
-bind Space:magic-space
-
 # EDITOR
 export EDITOR=vim
