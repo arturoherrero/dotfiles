@@ -18,4 +18,4 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWUPSTREAM="auto git"
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export PROMPT_DIRTRIM=2
-export PROMPT_COMMAND="$PROMPT_COMMAND __git_ps1 "'"${GRAY}${USR}@${HOST}:${PURPLE}${DIR}${OFF}" "\$ " "{%s}"'
+export PROMPT_COMMAND="history -a; __git_ps1 "'"${GRAY}${USR}@${HOST}:${PURPLE}${DIR}${OFF}" "\$ " "{%s}"'
