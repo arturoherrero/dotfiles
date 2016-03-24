@@ -37,3 +37,6 @@ complete -d cd
 
 # EDITOR
 export EDITOR=vim
+
+# Don't check mail when opening terminal.
+unset MAILCHECK
