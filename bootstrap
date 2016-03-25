@@ -28,6 +28,9 @@ brew install tree
 brew install webkit2png
 brew install wget
 
+# Install Python packages
+pip install Pygments
+
 # Vim plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mvim +PluginInstall +qall

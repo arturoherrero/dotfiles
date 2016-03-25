@@ -38,5 +38,8 @@ complete -d cd
 # EDITOR
 export EDITOR=vim
 
+# less with syntax highlight
+alias lessc='LESS="-R" LESSOPEN="| pygmentize -g %s" less'
+
 # Don't check mail when opening terminal.
 unset MAILCHECK
