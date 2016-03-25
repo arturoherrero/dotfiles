@@ -1,7 +1,4 @@
-source ~/.git-prompt.sh
-source ~/.git-completion.bash
 eval "$(hub alias -s)"
-source ~/.hub.bash_completion.sh
 
 # $ git browse
 # Open a Bitbucket page in the default browser.

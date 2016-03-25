@@ -13,6 +13,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install ack
 brew install autossh
 brew install git
+brew install homebrew/versions/bash-completion2
 brew install hr
 brew install htop-osx
 brew install httpie
@@ -30,11 +31,6 @@ brew install wget
 # Vim plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mvim +PluginInstall +qall
-
-# Bash completions
-curl -fsSL -o ~/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-curl -fsSL -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
-curl -fsSL -o ~/.hub.bash_completion.sh https://raw.githubusercontent.com/github/hub/master/etc/hub.bash_completion.sh
 
 # Brew GUI Mac applications
 brew install caskroom/cask/brew-cask

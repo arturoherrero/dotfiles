@@ -6,8 +6,8 @@ for file in $(dotfiles_dir)/system/*; do
   source $file
 done
 
-# Homebrew
-source `brew --repository`/Library/Contributions/brew_bash_completion.sh
+# Bash completion 2
+source $(brew --prefix)/share/bash-completion/bash_completion
 
 # rbenv
 eval "$(rbenv init -)"
