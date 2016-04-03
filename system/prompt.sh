@@ -19,3 +19,7 @@ export GIT_PS1_SHOWUPSTREAM="auto git"
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export PROMPT_DIRTRIM=2
 export PROMPT_COMMAND="history -a; __git_ps1 "'"${GRAY}${USR}@${HOST}:${PURPLE}${DIR}${OFF}" "\$ " "{%s}"'
+
+if [[ -n "$DOCKER" ]]; then
+  export PROMPT_COMMAND="history -a; __git_ps1 "'"${CYAN}docker${OFF}@${HOST}:${PURPLE}${DIR}${OFF}" "\$ " "{%s}"'
+fi

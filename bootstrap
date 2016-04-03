@@ -12,6 +12,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install formulas
 brew install ack
 brew install autossh
+brew install docker docker-machine docker-compose
 brew install git
 brew install homebrew/versions/bash-completion2
 brew install hr
