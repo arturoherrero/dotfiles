@@ -8,6 +8,3 @@ done
 
 # Bash completion 2
 source $(brew --prefix)/share/bash-completion/bash_completion
-
-# rbenv
-eval "$(rbenv init -)"
