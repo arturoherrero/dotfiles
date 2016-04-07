@@ -9,7 +9,7 @@ alias rspec_prepare="rake db:test:prepare"
 alias rspec_pararell="rake parallel:spec"
 alias rspec_pararell_prepare="rake parallel:prepare"
 
-alias jekyll="jekyll server --watch"
+alias jekyll="jekyll server --watch --future"
 
 # rbenv
 eval "$(rbenv init -)"
