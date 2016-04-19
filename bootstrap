@@ -19,6 +19,7 @@ brew install hr
 brew install htop-osx
 brew install httpie
 brew install hub
+brew install leiningen
 brew install macvim
 brew install mobile-shell
 brew install nmap
@@ -52,6 +53,7 @@ brew cask install gimp
 brew cask install google-chrome
 brew cask install imageoptim
 brew cask install iterm2
+brew cask install java
 brew cask install jdownloader
 brew cask install kodi
 brew cask install macdown
