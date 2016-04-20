@@ -50,7 +50,7 @@ au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
-" Complete longest common string, then list alternatives.
+" Complete longest common string, then list alternatives
 set wildmode=longest,list
 
 " Record the last 200 commands
@@ -63,8 +63,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -86,3 +86,9 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$']
 " Reveal file in NERDTree, Ctrl-a
 nmap <C-a> :NERDTreeFind<CR>
+
+" Rainbow Parentheses always on
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
