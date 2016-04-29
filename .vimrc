@@ -77,6 +77,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'valloric/MatchTagAlways'
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 filetype plugin indent on
