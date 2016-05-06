@@ -33,6 +33,6 @@
 [push]
   default = simple
 [pull]
-	ff = only
+  ff = only
 [merge]
-	ff = only
+  ff = only
