@@ -32,6 +32,10 @@ brew install tree
 brew install webkit2png
 brew install wget
 
+# Install my own formulas
+brew tap arturoherrero/formulae
+brew install gvar
+
 # Install Python packages
 sudo easy_install Pygments
 
