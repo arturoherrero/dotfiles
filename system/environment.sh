@@ -23,6 +23,9 @@ shopt -s cdable_vars
 # Correct spelling errors in arguments supplied to cd
 shopt -s cdspell
 
+# Checks the window size after each command
+shopt -s checkwinsize
+
 # Correct spelling errors during tab-completion
 shopt -s dirspell
 
@@ -41,5 +44,5 @@ export EDITOR=vim
 # less with syntax highlight
 alias lessc='LESS="-R" LESSOPEN="| pygmentize -g %s" less'
 
-# Don't check mail when opening terminal.
+# Don't check mail when opening terminal
 unset MAILCHECK
