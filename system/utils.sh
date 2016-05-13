@@ -6,6 +6,14 @@ hashify() {
   echo $1 | cut -c1-7
 }
 
+ip_private() {
+  ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{ gsub("addr:", ""); print $2 }'
+}
+
+ip_public() {
+  dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2 }'
+}
+
 # Kill a process by name
 killit() {
   pgrep -f "$1" | xargs kill -9
