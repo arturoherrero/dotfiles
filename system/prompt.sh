@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 OFF='\[\033[0m\]'
 
 # Regular colors
@@ -53,6 +55,6 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 export PROMPT_DIRTRIM=2
 export PROMPT_COMMAND="history -a; __git_ps1 "'${GRAY}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF} "\$ " "{%s}"'
 
-if [[ -n "$DOCKER" ]]; then
+if [[ -n "$DOCKER_TERMINAL" ]]; then
   export PROMPT_COMMAND="history -a; __git_ps1 "'${CYAN}docker${OFF}@${HOST}:${LPURPLE}${DIR}${OFF} "\$ " "{%s}"'
 fi
