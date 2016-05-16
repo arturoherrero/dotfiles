@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 alias be="bundle exec"
 alias guard="bundle exec guard"
 alias rails="bundle exec rails"

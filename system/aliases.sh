@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 alias ...="cd ../.."
 alias .2="cd ../../"
 alias cd..="cd .."

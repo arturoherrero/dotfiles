@@ -1,13 +1,15 @@
+#!/usr/bin/env bash
+
 eval "$(hub alias -s)"
 
 # $ git browse
 # Open a Bitbucket page in the default browser.
 git_browse() {
-  local domain="$(git ls-remote --get-url | cut -c 5- | cut -d: -f1)"
-  local url="$(git ls-remote --get-url | cut -c 5- | cut -d: -f2)"
+  domain="$(git ls-remote --get-url | cut -c 5- | cut -d: -f1)"
+  url="$(git ls-remote --get-url | cut -c 5- | cut -d: -f2)"
 
   if [ "$domain" == "bitbucket.org" ]; then
-    open https://bitbucket.org/$url
+    open https://bitbucket.org/"$url"
   else
     git "$@"
   fi
@@ -17,13 +19,13 @@ git_browse() {
 # Error pushing to a remote repository.
 # Push the current branch and set the remote as upstream.
 git_push() {
-  local stderr=$(\git "$@" 2> >(tee /dev/stderr | head -n 1))
-  local current_branch=`git rev-parse --abbrev-ref HEAD`
-  local error="fatal: The current branch $current_branch has no upstream branch."
+  stderr=$(command git "$@" 2> >(tee /dev/stderr | head -n 1))
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  error="fatal: The current branch $current_branch has no upstream branch."
 
   if [ "$stderr" == "$error" ]; then
     echo "↝ git push --set-upstream origin $current_branch"
-    git push --set-upstream origin $current_branch
+    git push --set-upstream origin "$current_branch"
   fi
 }
 
@@ -37,7 +39,7 @@ my_git() {
   fi
 }
 
-alias git="my_git $*"
+alias git='my_git'
 
 _git_jump() {
   _git_branch

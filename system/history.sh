@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Save multi-line commands as one command
 shopt -s cmdhist
 

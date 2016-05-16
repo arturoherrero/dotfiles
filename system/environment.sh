@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Enable colorized output
 export CLICOLOR=1
 export LSCOLORS=Exfxcxdxbxegedabagacad
