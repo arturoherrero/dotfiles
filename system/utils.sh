@@ -8,10 +8,12 @@ hashify() {
   echo "$1" | cut -c1-7
 }
 
+# Show private ip address
 ip_private() {
   ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{ gsub("addr:", ""); print $2 }'
 }
 
+# Show public ip address
 ip_public() {
   dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2 }'
 }
