@@ -13,3 +13,8 @@ cdf() {
 
 # Open the current location/repository with SourceTree
 alias sourcetree="open -a SourceTree ."
+
+# Move to the trash
+trash() {
+  mv "$@" ~/.Trash
+}
