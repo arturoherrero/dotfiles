@@ -30,3 +30,12 @@ updateme
 
 Using `system/custom.sh` file, I can add any custom configuration that is not
 going to be persisted in the repository.
+
+
+## Who made this?
+
+This was made by Arturo Herrero under the MIT License. Find me on Twitter
+[@ArturoHerrero][1].
+
+
+[1]: https://twitter.com/ArturoHerrero

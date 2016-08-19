@@ -81,7 +81,9 @@ brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
 brew cask install vlc
+brew cask install webtorrent
 brew cask install whatsapp
+brew cask install yacreader
 
 # Bash 4 in OS X
 brew install bash
