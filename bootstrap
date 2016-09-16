@@ -7,7 +7,7 @@ find "$(pwd)" -name ".*" -type f -maxdepth 1 | xargs -I '{}' ln -s '{}' ~
 git update-index --skip-worktree system/custom.sh
 
 # Install Homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install formulas
 brew install ack
