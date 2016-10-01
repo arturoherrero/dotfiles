@@ -106,7 +106,25 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.screencapture type jpg
 
 # Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Show battery life percentage.
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Use scroll gesture with the Ctrl (^) modifier key to zoom
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+
+# Disable the warning when changing a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
+
+defaults write -app MacVim NSUserKeyEquivalents '{
+  "Select Next Tab"="~@\Uf703";
+  "Select Previous Tab"="~@\Uf702";
+}'
 
 # Install all available software updates
 sudo softwareupdate -ia
