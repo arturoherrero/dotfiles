@@ -37,10 +37,20 @@ on_exit() {
 
     if (($(gvar DOCKER_TERMINAL_COUNT) == 0)); then
       docker-machine stop default
-      yes | docker-machine rm default
-      yes | rm -rf ~/.docker/machine/machines/default
     fi
   fi
 }
 
 trap on_exit EXIT
+
+docker_stop_all() {
+  docker stop "$(docker ps -q)"
+}
+
+docker_remove_all_containers() {
+  docker rm "$(docker ps -a -q)"
+}
+
+docker_remove_all_images() {
+  docker rm $(docker images -q)
+}
