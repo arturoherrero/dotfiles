@@ -87,6 +87,9 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.swp$']
 " Reveal file in NERDTree, Ctrl-a
 nmap <C-a> :NERDTreeFind<CR>
+" Configure NERDTree arrow symbols
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Rainbow Parentheses always on
 au VimEnter * RainbowParenthesesToggle
