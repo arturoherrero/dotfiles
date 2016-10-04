@@ -21,6 +21,7 @@ brew install hr
 brew install htop-osx
 brew install httpie
 brew install hub
+brew install kubectl
 brew install leiningen
 brew install macvim
 brew install mobile-shell
@@ -66,6 +67,7 @@ brew cask install jdownloader
 brew cask install kodi
 brew cask install macdown
 brew cask install macvim
+brew cask install minikube
 brew cask install openemu
 brew cask install osxfuse
 brew cask install psequel
