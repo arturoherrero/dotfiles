@@ -52,5 +52,5 @@ docker_remove_all_containers() {
 }
 
 docker_remove_all_images() {
-  docker rm $(docker images -q)
+  docker rmi $(docker images -q)
 }
