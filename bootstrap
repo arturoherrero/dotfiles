@@ -53,9 +53,10 @@ brew cask install bettertouchtool
 brew cask install caffeine
 brew cask install calibre
 brew cask install cloud
+brew cask install dash
+brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install evernote
-brew cask install dash
 brew cask install flickr-uploadr
 brew cask install gimp
 brew cask install google-chrome
