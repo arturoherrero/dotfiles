@@ -27,6 +27,7 @@ killit() {
 mcd() {
   mkdir -p "$1" && cd "$_" || exit
 }
+alias mkdircd=mcd
 
 # Time && Date
 alias now='date +"%T"'
