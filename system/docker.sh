@@ -31,7 +31,7 @@ EOF
   DOCKER_TERMINAL=true bash --login
 }
 
-on_exit() {
+__system_docker_on_exit() {
   if [ "$DOCKER_TERMINAL" = true ]; then
     gvar DOCKER_TERMINAL_COUNT=$(($(gvar DOCKER_TERMINAL_COUNT) - 1))
 
@@ -41,7 +41,7 @@ on_exit() {
   fi
 }
 
-trap on_exit EXIT
+trap __system_docker_on_exit EXIT
 
 docker_stop_all() {
   docker stop $(docker ps -q)
