@@ -15,17 +15,44 @@ git_browse() {
   fi
 }
 
+git_current_branch() {
+  git rev-parse --abbrev-ref HEAD
+}
+
 # $ git push
-# Error pushing to a remote repository.
+# Prevent error when push to a remote repository without upstream branch.
 # Push the current branch and set the remote as upstream.
-git_push() {
+git_push_creating_upstream_branch() {
   stderr=$(command git "$@" 2> >(tee /dev/stderr | head -n 1))
-  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  current_branch=$(git_current_branch)
   error="fatal: The current branch $current_branch has no upstream branch."
 
   if [ "$stderr" == "$error" ]; then
     echo "↝ git push --set-upstream origin $current_branch"
     git push --set-upstream origin "$current_branch"
+  fi
+}
+
+# git push -f
+# git push --force
+# Show a confirmation when force a push on master branch.
+git_push_confirmation_master_branch_force() {
+  if [ "$(git_current_branch)" == "master" ]; then
+    read -p "Force pushing to master branch. Are you sure? " -r
+    if [[ $REPLY =~ ^(yes|y|Y)$ ]]; then
+      git "$@"
+    fi
+  else
+    git_push_creating_upstream_branch "$@"
+  fi
+}
+
+# $ git push
+git_push() {
+  if [[ "$@" == "push -f"* || "$@" == "push --force"* ]]; then
+    git_push_confirmation_master_branch_force "$@"
+  else
+    git_push_creating_upstream_branch "$@"
   fi
 }
 
