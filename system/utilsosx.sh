@@ -11,6 +11,16 @@ cdf() {
   fi
 }
 
+__system_brew() {
+  if [[ "$1" == "cask" && "$2" == "upgrade" ]]; then
+    brew update
+    brew cask install --force "$3"
+  else
+    brew "$@"
+  fi
+}
+alias brew=__system_brew
+
 # Open the current location/repository with SourceTree
 alias sourcetree="open -a SourceTree ."
 
