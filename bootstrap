@@ -83,6 +83,7 @@ brew cask install sourcetree
 brew cask install spotifree
 brew cask install spotify
 brew cask install sqlitebrowser
+brew cask install steam
 brew cask install telegram-desktop
 brew cask install the-unarchiver
 brew cask install tomighty
@@ -93,6 +94,7 @@ brew cask install virtualbox
 brew cask install vlc
 brew cask install webtorrent
 brew cask install whatsapp
+brew cask install xbox360-controller-driver
 brew cask install yacreader
 
 # Bash 4 in OS X
