@@ -78,6 +78,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 filetype plugin indent on
