@@ -58,9 +58,9 @@ brew cask install dash
 brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install evernote
-brew cask install flickr-uploadr
 brew cask install gimp
 brew cask install google-chrome
+brew cask install google-drive
 brew cask install ichm
 brew cask install imageoptim
 brew cask install iterm2
@@ -95,7 +95,6 @@ brew cask install vlc
 brew cask install webtorrent
 brew cask install whatsapp
 brew cask install xbox360-controller-driver
-brew cask install yacreader
 
 # Bash 4 in OS X
 brew install bash
