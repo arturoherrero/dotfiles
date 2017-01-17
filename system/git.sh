@@ -75,3 +75,7 @@ _git_jump() {
 _git_remove() {
   _git_branch
 }
+
+_git_integrate() {
+  _git_branch
+}

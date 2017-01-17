@@ -14,6 +14,7 @@
   discard = "!git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)"
   head = checkout -- .
   hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
+  integrate = !git checkout master && git merge $1 && git push && git remove $1
   jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
