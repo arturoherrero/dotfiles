@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 alias be="bundle exec"
+alias cap="bundle exec cap"
 alias guard="bundle exec guard"
 alias rackup="bundle exec rackup"
 alias rails="bundle exec rails"
