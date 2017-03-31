@@ -2,6 +2,7 @@
 
 alias be="bundle exec"
 alias cap="bundle exec cap"
+alias cucumber="bundle exec cucumber"
 alias guard="bundle exec guard"
 alias rackup="bundle exec rackup"
 alias rails="bundle exec rails"
