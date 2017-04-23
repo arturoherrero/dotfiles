@@ -43,6 +43,7 @@ BLCYAN='\[\033[1;96m\]'
 BLWHITE='\[\033[1;97m\]'
 
 HOST='\h'
+USR_COLOR=$GRAY
 USR='\u'
 DIR='\w'
 
@@ -53,8 +54,10 @@ export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWUPSTREAM="auto git"
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export PROMPT_DIRTRIM=2
-export PROMPT_COMMAND="history -a; __git_ps1 "'${GRAY}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF} "\$ " "{%s}"'
 
 if [[ -n "$DOCKER_TERMINAL" ]]; then
-  export PROMPT_COMMAND="history -a; __git_ps1 "'${CYAN}docker${OFF}@${HOST}:${LPURPLE}${DIR}${OFF} "\$ " "{%s}"'
+  USR_COLOR=$CYAN
+  USR="docker"
 fi
+
+export PROMPT_COMMAND="history -a; __git_ps1 "'${USR_COLOR}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF} "\$ " "{%s}"'
