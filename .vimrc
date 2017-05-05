@@ -1,10 +1,12 @@
 " Turn on color syntax highlighting
 syntax on
 
-" Markdown highlighting (default only for *.markdown files)
-au BufRead,BufNewFile *.md set filetype=markdown
+" CoffeeScript highlighting
+au BufRead,BufNewFile *.coffee set filetype=javascript
 " Jbuilder highlighting
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
+" Markdown highlighting (default only for *.markdown files)
+au BufRead,BufNewFile *.md set filetype=markdown
 
 " Show line numbers
 set number
