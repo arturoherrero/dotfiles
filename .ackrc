@@ -1,4 +1,4 @@
 --ignore-file=ext:log
+--ignore-dir=coverage
 --ignore-dir=tmp
 --ignore-dir=vendor
---ignore-dir=coverage
