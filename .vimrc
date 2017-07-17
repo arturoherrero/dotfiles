@@ -102,3 +102,6 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " Exclude files and directories using CtrlP's own g:ctrlp_custom_ignore
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+" Use Ag with ack.vim
+let g:ackprg = 'ag --vimgrep'

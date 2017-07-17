@@ -21,3 +21,5 @@ alias mount="mount | column -t"
 alias where=which
 
 alias vi=vim
+
+alias ack=ag
