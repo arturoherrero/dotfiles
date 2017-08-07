@@ -3,8 +3,8 @@
 # Symbolic link with .dotfiles to ~/$HOME directory
 find "$(pwd)" -name ".*" -type f -maxdepth 1 | xargs -I '{}' ln -s '{}' ~
 
-# Ignore system/custom.sh file. http://stackoverflow.com/a/653495/462015
-git update-index --skip-worktree system/custom.sh
+# Ignore system/zcustom.sh file. http://stackoverflow.com/a/653495/462015
+git update-index --skip-worktree system/zcustom.sh
 
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
