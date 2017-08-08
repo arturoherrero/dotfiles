@@ -41,3 +41,4 @@
   ff = only
 [merge]
   ff = only
+  log = true
