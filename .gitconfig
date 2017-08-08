@@ -33,6 +33,8 @@
 [core]
   excludesfile = ~/.gitignore
   whitespace = tab-in-indent
+[help]
+  autocorrect = 1
 [push]
   default = simple
 [pull]
