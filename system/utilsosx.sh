@@ -24,6 +24,11 @@ alias brew=__system_brew
 # Open the current location/repository with SourceTree
 alias sourcetree="open -a SourceTree ."
 
+# tailf - follow the growth of a log file
+tailf() {
+  tail -f "$@"
+}
+
 # Move to the trash
 trash() {
   mv "$@" ~/.Trash
