@@ -20,7 +20,7 @@ __system_git_current_branch() {
 }
 
 # $ git push
-# Prevent error when push to a remote repository without upstream branch.
+# Prevent error when pushing to a remote repository without upstream branch.
 # Push the current branch and set the remote as upstream.
 __system_git_push_creating_upstream_branch() {
   stderr=$(command git "$@" 2> >(tee /dev/stderr | head -n 1))
@@ -35,7 +35,7 @@ __system_git_push_creating_upstream_branch() {
 
 # git push -f
 # git push --force
-# Show a confirmation when force a push on master branch.
+# Show a confirmation when forcing a push on master branch.
 __system_git_push_confirmation_master_branch_force() {
   if [ "$(__system_git_current_branch)" == "master" ]; then
     read -p "Force pushing to master branch. Are you sure? " -r
