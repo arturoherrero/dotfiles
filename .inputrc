@@ -16,6 +16,9 @@ set skip-completed-text on
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
 
+# Do not autocomplete hidden files unless the pattern explicitly begins with a dot
+set match-hidden-files off
+
 # Enable incremental history search with Alt + up/down arrows
 "\e\e[A": history-search-backward
 "\e\e[B": history-search-forward
