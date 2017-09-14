@@ -11,6 +11,7 @@ git update-index --skip-worktree system/zcustom.sh
 
 # Install formulas
 brew install autossh
+brew install diff-so-fancy
 brew install docker docker-machine docker-compose
 brew install elixir
 brew install git
