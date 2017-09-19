@@ -1,6 +1,9 @@
 " Turn on color syntax highlighting
 syntax on
 
+"Reload files changed outside vim
+set autoread
+
 " CoffeeScript highlighting
 au BufRead,BufNewFile *.coffee set filetype=javascript
 " Jbuilder highlighting
