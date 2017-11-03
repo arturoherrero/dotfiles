@@ -27,6 +27,7 @@ brew install macvim
 brew install mobile-shell
 brew install nmap
 brew install pstree
+brew install pwgen
 brew install rbenv ruby-build
 brew install shellcheck
 brew install the_silver_searcher

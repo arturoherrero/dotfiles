@@ -8,6 +8,11 @@ hashify() {
   echo "$1" | cut -c1-7
 }
 
+# Generate a random password
+generate_password() {
+  pwgen -sy1 20
+}
+
 # Show private ip address
 ip_private() {
   ifconfig | grep "inet " | grep -v 127.0.0.1 | awk '{ gsub("addr:", ""); print $2 }'
