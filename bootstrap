@@ -57,6 +57,7 @@ brew cask install calibre
 brew cask install cloud
 brew cask install cyberduck
 brew cask install dash
+brew cask install db-browser-for-sqlite
 brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install evernote
@@ -84,7 +85,6 @@ brew cask install slack
 brew cask install sourcetree
 brew cask install spotifree
 brew cask install spotify
-brew cask install sqlitebrowser
 brew cask install steam
 brew cask install telegram-desktop
 brew cask install the-unarchiver
