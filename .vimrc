@@ -84,6 +84,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'hashivim/vim-terraform'
+Plugin 'godlygeek/tabular'
 
 call vundle#end()
 filetype plugin indent on
