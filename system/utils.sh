@@ -20,7 +20,7 @@ ip_private() {
 
 # Show public ip address
 ip_public() {
-  dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2 }'
+  dig +short whoami.akamai.net @ns1-1.akamaitech.net
 }
 
 # Kill a process by name
