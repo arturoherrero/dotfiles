@@ -11,12 +11,12 @@ git update-index --skip-worktree system/zcustom.sh
 
 # Install formulas
 brew install autossh
+brew install bash-completion@2
 brew install diff-so-fancy
 brew install docker docker-machine docker-compose
 brew install elixir
 brew install git
 brew install go
-brew install homebrew/versions/bash-completion2
 brew install hr
 brew install htop-osx
 brew install httpie
@@ -90,6 +90,7 @@ brew cask install telegram-desktop
 brew cask install the-unarchiver
 brew cask install tomighty
 brew cask install torbrowser
+brew cask install tweeten
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
