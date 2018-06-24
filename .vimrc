@@ -71,8 +71,8 @@ endfunction
 " Complete longest common string, then list alternatives
 set wildmode=longest,list
 
-" Record the last 200 commands
-set history=200
+" Record the last 1000 commands
+set history=1000
 
 " Maintain undo history between sessions
 set undofile
