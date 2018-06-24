@@ -47,6 +47,7 @@ sudo easy_install Pygments
 # Vim plugin manager
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mvim +PluginInstall +qall
+mkdir ~/.vim/undodir
 
 # Brew GUI Mac applications
 brew install caskroom/cask/brew-cask

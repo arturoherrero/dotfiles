@@ -74,6 +74,10 @@ set wildmode=longest,list
 " Record the last 200 commands
 set history=200
 
+" Maintain undo history between sessions
+set undofile
+set undodir=~/.vim/undodir
+
 " Vundle
 set nocompatible
 filetype off
