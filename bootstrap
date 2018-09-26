@@ -62,17 +62,14 @@ brew cask install db-browser-for-sqlite
 brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install evernote
-brew cask install gimp
 brew cask install google-chrome
 brew cask install google-drive
-brew cask install ichm
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install java
 brew cask install jdownloader
 brew cask install kap
 brew cask install kodi
-brew cask install libreoffice
 brew cask install macdown
 brew cask install macvim
 brew cask install minikube
@@ -91,14 +88,12 @@ brew cask install telegram-desktop
 brew cask install the-unarchiver
 brew cask install tomighty
 brew cask install torbrowser
-brew cask install tweeten
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
 brew cask install vlc
 brew cask install webtorrent
 brew cask install whatsapp
-brew cask install xbox360-controller-driver
 
 # Bash 4 in OS X
 brew install bash
