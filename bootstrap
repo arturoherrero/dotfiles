@@ -50,8 +50,8 @@ mvim +PluginInstall +qall
 mkdir ~/.vim/undodir
 
 # Brew GUI Mac applications
-brew install caskroom/cask/brew-cask
 brew cask install alfred
+brew cask install authy
 brew cask install bettertouchtool
 brew cask install caffeine
 brew cask install calibre
