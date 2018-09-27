@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# Battery time remaining
+battery() {
+  pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d';' | cut -f2 -d' '
+}
+
 # cd to into the current Finder location
 cdf() {
   target=$(osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)')
