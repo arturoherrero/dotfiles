@@ -5,6 +5,16 @@ battery() {
   pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d';' | cut -f2 -d' '
 }
 
+__system_brew() {
+  if [[ "$1" == "cask" && "$2" == "upgrade" ]]; then
+    brew update
+    brew cask install --force "$3"
+  else
+    brew "$@"
+  fi
+}
+alias brew=__system_brew
+
 # cd to into the current Finder location
 cdf() {
   target=$(osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)')
@@ -15,16 +25,6 @@ cdf() {
     echo 'No Finder window found' >&2
   fi
 }
-
-__system_brew() {
-  if [[ "$1" == "cask" && "$2" == "upgrade" ]]; then
-    brew update
-    brew cask install --force "$3"
-  else
-    brew "$@"
-  fi
-}
-alias brew=__system_brew
 
 # Open the current location/repository with SourceTree
 alias sourcetree="open -a SourceTree ."
