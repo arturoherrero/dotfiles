@@ -26,6 +26,11 @@ cdf() {
   fi
 }
 
+# Generate a random password and copy to clipboard
+generate_password() {
+  LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
+}
+
 # Open the current location/repository with SourceTree
 alias sourcetree="open -a SourceTree ."
 
