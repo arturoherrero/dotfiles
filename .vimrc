@@ -68,6 +68,17 @@ function! StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
+" Pretty print JSON
+function! FormatJSON()
+  " preparation: save cursor position.
+  let l = line(".")
+  let c = col(".")
+  :%!jq .
+  " restore previous cursor position
+  call cursor(l, c)
+  :set syntax=json
+endfunction
+
 " Complete longest common string, then list alternatives
 set wildmode=longest,list
 
