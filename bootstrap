@@ -27,7 +27,6 @@ brew install macvim
 brew install mobile-shell
 brew install nmap
 brew install pstree
-brew install pwgen
 brew install rbenv ruby-build
 brew install shellcheck
 brew install the_silver_searcher
@@ -74,7 +73,6 @@ brew cask install macdown
 brew cask install macvim
 brew cask install minikube
 brew cask install openemu
-brew cask install osxfuse
 brew cask install psequel
 brew cask install robomongo
 brew cask install sequel-pro
