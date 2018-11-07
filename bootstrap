@@ -85,7 +85,7 @@ brew cask install steam
 brew cask install telegram-desktop
 brew cask install the-unarchiver
 brew cask install tomighty
-brew cask install torbrowser
+brew cask install tor-browser
 brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install virtualbox
