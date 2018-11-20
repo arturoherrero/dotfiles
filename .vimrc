@@ -89,6 +89,11 @@ set history=1000
 set undofile
 set undodir=~/.vim/undodir
 
+" Toggle spell checking, Ctrl-s
+nnoremap <C-s> :set spell!<ENTER>
+" Set region to British English
+set spelllang=en_gb
+
 " Vundle
 set nocompatible
 filetype off
