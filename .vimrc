@@ -29,7 +29,7 @@ nnoremap <C-l> :nohlsearch<CR><C-l>
 autocmd InsertEnter * :setlocal nohlsearch
 autocmd InsertLeave * :setlocal hlsearch
 
-" Becomming root to save a document, just type `w!!`
+" Becoming root to save a document, just type `w!!`
 cmap w!! %!sudo tee > /dev/null %
 
 " 80-column indication
@@ -48,14 +48,14 @@ set expandtab
 " Indentation
 set autoindent
 
-" Highlight trailing whitespace
+" Highlight trailing white space
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
 au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
-" Strip trailing whitespaces
+" Strip trailing white spaces
 function! StripTrailingWhitespaces()
   " preparation: save last search, and cursor position.
   let _s=@/
