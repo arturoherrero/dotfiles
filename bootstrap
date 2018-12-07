@@ -61,6 +61,8 @@ brew cask install db-browser-for-sqlite
 brew cask install disk-inventory-x
 brew cask install dropbox
 brew cask install evernote
+brew cask install firefox
+brew cask install fromscratch
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install imageoptim
