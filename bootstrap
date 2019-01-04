@@ -70,6 +70,7 @@ brew cask install iterm2
 brew cask install java
 brew cask install jdownloader
 brew cask install kap
+brew cask install karabiner-elements
 brew cask install kodi
 brew cask install macdown
 brew cask install macvim
