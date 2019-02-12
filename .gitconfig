@@ -20,7 +20,7 @@
   jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
-  pair = !git commit -t ~/.gitpair
+  pair = !git commit -v -t ~/.gitpair
   remotes = remote -v
   remove = !git push origin --delete $1 && git branch -d $1 2>/dev/null
   remove-remotes = !git remote update -p && git branch -r --merged origin/master | grep origin | grep -v master | cut -d"/" -f2- | xargs git push origin --delete
