@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
 alias ...="cd ../.."
-alias .2="cd ../../"
 alias cd..="cd .."
 
 alias ls="ls -F"
-alias l.="ls -a"
 alias la="ls -a"
 alias ll="ls -la"
 
@@ -21,5 +19,3 @@ alias mount="mount | column -t"
 alias where=which
 
 alias vi=vim
-
-alias ack=ag
