@@ -1,4 +1,9 @@
-.bundle
+# macOS
 .DS_Store
+
+# Vim
 *.swp
 *.swo
+
+# IntelliJ
+.idea/
