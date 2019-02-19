@@ -50,6 +50,7 @@ mkdir ~/.vim/undodir
 
 # Brew GUI Mac applications
 brew cask install alfred
+brew cask install atom
 brew cask install authy
 brew cask install bettertouchtool
 brew cask install caffeine
@@ -66,6 +67,7 @@ brew cask install fromscratch
 brew cask install google-chrome
 brew cask install google-drive
 brew cask install imageoptim
+brew cask install intellij-idea-ce
 brew cask install iterm2
 brew cask install java
 brew cask install jdownloader
