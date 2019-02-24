@@ -49,7 +49,6 @@ sudo easy_install Pygments
 
 # Brew GUI Mac applications
 brew cask install alfred
-brew cask install atom
 brew cask install authy
 brew cask install bettertouchtool
 brew cask install caffeine
@@ -110,6 +109,12 @@ defaults write -app MacVim NSUserKeyEquivalents '{
   "Select Next Tab"="~@\Uf703";
   "Select Previous Tab"="~@\Uf702";
 }'
+
+
+# Install Atom & configuration
+brew cask install atom
+find "$(pwd)" -name "atom" -type d | xargs -I '{}' ln -s '{}' ~/.atom
+apm install package-sync
 
 
 # Bash 4 in OS X
