@@ -43,10 +43,15 @@ brew install gvar
 # Install Python packages
 sudo easy_install Pygments
 
-# Vim plugin manager
+# Vim configuration
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mvim +PluginInstall +qall
 mkdir ~/.vim/undodir
+
+defaults write -app MacVim NSUserKeyEquivalents '{
+  "Select Next Tab"="~@\Uf703";
+  "Select Previous Tab"="~@\Uf702";
+}'
 
 # Brew GUI Mac applications
 brew cask install alfred
@@ -127,11 +132,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
-
-defaults write -app MacVim NSUserKeyEquivalents '{
-  "Select Next Tab"="~@\Uf703";
-  "Select Previous Tab"="~@\Uf702";
-}'
 
 # Install all available software updates
 sudo softwareupdate -ia
