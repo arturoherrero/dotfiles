@@ -65,6 +65,7 @@ brew cask install cyberduck
 brew cask install dash
 brew cask install db-browser-for-sqlite
 brew cask install disk-inventory-x
+brew cask install docker
 brew cask install dropbox
 brew cask install evernote
 brew cask install firefox
