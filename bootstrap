@@ -6,8 +6,10 @@ find "$(pwd)" -name ".*" -type f -maxdepth 1 | xargs -I '{}' ln -s '{}' ~
 # Ignore system/zcustom.sh file. http://stackoverflow.com/a/653495/462015
 git update-index --skip-worktree system/zcustom.sh
 
+
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 
 # Install formulas
 brew install autossh
@@ -23,7 +25,6 @@ brew install httpie
 brew install hub
 brew install kubectl
 brew install leiningen
-brew install macvim
 brew install mobile-shell
 brew install nmap
 brew install pstree
@@ -36,22 +37,15 @@ brew install webkit2png
 brew install wget
 brew install wifi-password
 
+
 # Install my own formulas
 brew tap arturoherrero/formulae
 brew install gvar
 
+
 # Install Python packages
 sudo easy_install Pygments
 
-# Vim configuration
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-mvim +PluginInstall +qall
-mkdir ~/.vim/undodir
-
-defaults write -app MacVim NSUserKeyEquivalents '{
-  "Select Next Tab"="~@\Uf703";
-  "Select Previous Tab"="~@\Uf702";
-}'
 
 # Brew GUI Mac applications
 brew cask install alfred
@@ -104,10 +98,25 @@ brew cask install vlc
 brew cask install webtorrent
 brew cask install whatsapp
 
+
+# Install MacVim & configuration
+brew install macvim
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+mvim +PluginInstall +qall
+mkdir ~/.vim/undodir
+
+defaults write -app MacVim NSUserKeyEquivalents '{
+  "Select Next Tab"="~@\Uf703";
+  "Select Previous Tab"="~@\Uf702";
+}'
+
+
 # Bash 4 in OS X
 brew install bash
 sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
 chsh -s "$(brew --prefix)"/bin/bash
+
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
@@ -133,6 +142,7 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
+
 
 # Install all available software updates
 sudo softwareupdate -ia

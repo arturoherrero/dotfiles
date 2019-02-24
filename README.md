@@ -14,6 +14,7 @@ Clone the repository and run the bootstrap command:
 
 ```shell
 git clone git@github.com:arturoherrero/dotfiles.git
+cd dotfiles
 sh bootstrap
 ```
 
