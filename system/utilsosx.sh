@@ -5,15 +5,6 @@ battery() {
   pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d';' | cut -f2 -d' '
 }
 
-__system_brew() {
-  if [[ "$1" == "cask" && "$2" == "upgrade" ]]; then
-    brew update
-    brew cask install --force "$3"
-  else
-    brew "$@"
-  fi
-}
-alias brew=__system_brew
 
 # cd to into the current Finder location
 cdf() {
@@ -26,18 +17,22 @@ cdf() {
   fi
 }
 
+
 # Generate a random password and copy to clipboard
 generate_password() {
   LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
 }
 
+
 # Open the current location/repository with SourceTree
 alias sourcetree="open -a SourceTree ."
+
 
 # tailf - follow the growth of a log file
 tailf() {
   tail -f "$@"
 }
+
 
 # Move to the trash
 trash() {
