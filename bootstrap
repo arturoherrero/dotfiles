@@ -51,6 +51,7 @@ sudo easy_install Pygments
 brew cask install alfred
 brew cask install authy
 brew cask install bettertouchtool
+brew cask install bitbar
 brew cask install caffeine
 brew cask install calibre
 brew cask install cloud
