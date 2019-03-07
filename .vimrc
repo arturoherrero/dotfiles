@@ -124,7 +124,7 @@ filetype plugin indent on
 
 " Show hidden files NERDTree
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.swp$', '.git', 'node_modules', '.terragrunt-cache']
+let NERDTreeIgnore = ['\.swp$', '^\.git$', '^node_modules$', '^\.terragrunt-cache$']
 " Reveal file in NERDTree, Ctrl-a
 nmap <C-a> :NERDTreeFind<CR>
 " Configure NERDTree arrow symbols
