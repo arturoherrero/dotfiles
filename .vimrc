@@ -131,6 +131,9 @@ nmap <C-a> :NERDTreeFind<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
+" Exclude .gitignore files for CtrlP
+let g:ctrlp_user_command = 'find %s -type f | grep -v "`cat .gitignore`"'
+
 " Rainbow Parentheses always on
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
