@@ -20,6 +20,7 @@
   jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
+  lg5 = lg -5
   pair = !git commit -v -t ~/.gitpair
   remotes = remote -v
   remove = !git push origin --delete $1 && git branch -d $1 2>/dev/null
