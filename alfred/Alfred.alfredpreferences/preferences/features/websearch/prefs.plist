@@ -17,6 +17,19 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>5E6006E8-110C-4C46-9335-F157DA2E9D21</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>calendar</string>
+			<key>text</key>
+			<string>Open Calendar</string>
+			<key>url</key>
+			<string>https://calendar.google.com</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>836BDFD6-DAF5-4F1B-844D-9487AA982C3A</key>
 		<dict>
 			<key>enabled</key>
