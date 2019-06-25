@@ -78,6 +78,7 @@ brew cask install macdown
 brew cask install macvim
 brew cask install minikube
 brew cask install openemu
+brew cask install postman
 brew cask install psequel
 brew cask install robomongo
 brew cask install sequel-pro
