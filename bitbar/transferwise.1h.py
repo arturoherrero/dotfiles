@@ -23,6 +23,6 @@ response = json.loads(urllib2.urlopen(request).read())
 transferwise_rate    = response["transferwiseRate"]
 transferwise_pay_out = response["transferwisePayOut"]
 
-print "{}/{} {:.5f}".format(symbol_from, symbol_to, transferwise_rate)
+print "{}/{} {:.3f}".format(symbol_from, symbol_to, transferwise_rate)
 print "---"
 print "{} {} ⇢ {} {} | href=https://transferwise.com/".format(amount, currency_from, transferwise_pay_out, currency_to)
