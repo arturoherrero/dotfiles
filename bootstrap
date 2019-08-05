@@ -118,6 +118,10 @@ find "$(pwd)" -name "atom" -type d | xargs -I '{}' ln -s '{}' ~/.atom
 apm install package-sync
 
 
+# iTerm2: Install Shell Integration
+curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
+
+
 # Bash 4 in OS X
 brew install bash
 sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
