@@ -14,6 +14,7 @@ git update-index --skip-worktree system/zcustom.sh
 # Install formulas
 brew install autossh
 brew install bash-completion@2
+brew install bat
 brew install diff-so-fancy
 brew install docker docker-machine docker-compose
 brew install elixir
@@ -41,10 +42,6 @@ brew install wifi-password
 # Install my own formulas
 brew tap arturoherrero/formulae
 brew install gvar
-
-
-# Install Python packages
-sudo easy_install Pygments
 
 
 # Brew GUI Mac applications
