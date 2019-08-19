@@ -119,7 +119,7 @@ apm install package-sync
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
 
-# Bash 4 in OS X
+# Update Bash version
 brew install bash
 sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
 chsh -s "$(brew --prefix)"/bin/bash
