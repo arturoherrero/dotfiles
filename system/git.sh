@@ -10,6 +10,8 @@ __system_git_browse() {
 
   if [ "$domain" == "bitbucket.org" ]; then
     open https://bitbucket.org/"$url"
+  elif [ "$domain" == "gitlab.com" ]; then
+    open https://gitlab.com/"$url"
   else
     git "$@"
   fi
