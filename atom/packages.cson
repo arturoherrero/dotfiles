@@ -1,4 +1,4 @@
 packages: [
-  "language-haml"
+  "atom-beautify"
   "package-sync"
 ]
