@@ -1,4 +1,5 @@
 *.log
+*.json
 coverage
 tmp
 vendor
