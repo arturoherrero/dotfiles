@@ -3,7 +3,8 @@
 eval "$(hub alias -s)"
 
 # $ git browse
-# Open a Bitbucket page in the default browser.
+# Open a Bitbucket/GitLab page in the default browser.
+# Same behaviour as GitHub with https://github.com/github/hub
 __system_git_browse() {
   domain="$(git ls-remote --get-url | cut -c 5- | cut -d: -f1)"
   url="$(git ls-remote --get-url | cut -c 5- | cut -d: -f2)"
