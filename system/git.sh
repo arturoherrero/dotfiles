@@ -76,6 +76,3 @@ _git_remove() {
 _git_integrate() {
   _git_branch
 }
-
-source "$(brew --prefix)"/etc/bash_completion.d/git-completion.bash
-source "$(brew --prefix)"/etc/bash_completion.d/git-prompt.sh
