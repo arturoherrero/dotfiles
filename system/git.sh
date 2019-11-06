@@ -13,7 +13,7 @@ __system_git_browse() {
 }
 
 __system_git_current_branch() {
-  git rev-parse --abbrev-ref HEAD
+  git branch --show-current
 }
 
 # $ git push
