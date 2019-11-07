@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-eval "$(hub alias -s)"
-
 # $ git browse
 # Open the project page in the default browser.
 # Same behaviour as GitHub with https://github.com/github/hub

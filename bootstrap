@@ -23,7 +23,6 @@ brew install go
 brew install hr
 brew install htop-osx
 brew install httpie
-brew install hub
 brew install kubectl
 brew install leiningen
 brew install mobile-shell
