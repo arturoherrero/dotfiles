@@ -49,7 +49,6 @@ brew cask install alfred
 brew cask install authy
 brew cask install bettertouchtool
 brew cask install bitbar
-brew cask install caffeine
 brew cask install calibre
 brew cask install cloud
 brew cask install cyberduck
@@ -70,6 +69,7 @@ brew cask install java
 brew cask install jdownloader
 brew cask install kap
 brew cask install karabiner-elements
+brew cask install keepingyouawake
 brew cask install kodi
 brew cask install macdown
 brew cask install minikube
