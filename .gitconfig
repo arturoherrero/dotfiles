@@ -17,7 +17,7 @@
   discard = "!git reset --hard origin/$(git branch --show-current)"
   head = checkout -- .
   hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
-  integrate = !git checkout master && git merge $1 && git push && git remove $1
+  integrate = !git checkout master && git merge $1 && git push && git remove-remote-and-local $1
   jump = !git stash && git checkout $1 && shift && git stash pop
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
@@ -25,8 +25,9 @@
   pair = !git commit -v -t ~/.gitpair
   push-branch = "!f() { git push --set-upstream $1 $(git branch --show-current); }; f"
   remotes = remote -v
-  remove = !git push origin --delete $1 && git branch -d $1 2>/dev/null
-  remove-remotes = !git remote update -p && git branch -r --merged origin/master | grep origin | grep -v master | cut -d"/" -f2- | xargs git push origin --delete
+  remove = !git branch -D $1 2>/dev/null
+  remove-remote-and-local = !git push origin --delete $1 && git branch -d $1 2>/dev/null
+  remove-remote-merged = !git remote update -p && git branch -r --merged origin/master | grep origin | grep -v master | cut -d"/" -f2- | xargs git push origin --delete
   st = status
   stashes = stash list
   stashp = stash pop
