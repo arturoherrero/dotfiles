@@ -1,15 +1,5 @@
 #!/usr/bin/env bash
 
-# $ git browse
-# Open the project page in the default browser.
-# Same behaviour as GitHub with https://github.com/github/hub
-__system_git_browse() {
-  domain="$(git ls-remote --get-url | cut -c 5- | cut -d: -f1)"
-  url="$(git ls-remote --get-url | cut -c 5- | cut -d: -f2)"
-
-  open https://"$domain"/"$url"
-}
-
 __system_git_current_branch() {
   git branch --show-current
 }
@@ -52,9 +42,7 @@ __system_git_push() {
 }
 
 __system_git() {
-  if [ "$1" == "browse" ]; then
-    __system_git_browse "$@"
-  elif [ "$1" == "push" ]; then
+  if [ "$1" == "push" ]; then
     __system_git_push "$@"
   else
     git "$@"
@@ -74,3 +62,5 @@ _git_remove() {
 _git_integrate() {
   __gitcomp_nl "$(__git_heads)"
 }
+
+export PATH="$(__system_dotfiles_dir)/git-commands:$PATH"

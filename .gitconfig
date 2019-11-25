@@ -7,7 +7,6 @@
   amend = commit --amend --no-edit
   br = branch
   branches = branch -a
-  browse =
   ca = !git add -A && git commit -v
   cap = !git add -A && git pair
   ci = commit -v
