@@ -64,13 +64,13 @@ __system_git() {
 alias git='__system_git'
 
 _git_jump() {
-  _git_branch
+  __gitcomp_nl "$(__git_heads)"
 }
 
 _git_remove() {
-  _git_branch
+  __gitcomp_nl "$(__git_heads)"
 }
 
 _git_integrate() {
-  _git_branch
+  __gitcomp_nl "$(__git_heads)"
 }
