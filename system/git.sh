@@ -63,4 +63,8 @@ _git_integrate() {
   __gitcomp_nl "$(__git_heads)"
 }
 
+_git_co() {
+  __gitcomp_nl "$(__git_heads)"
+}
+
 export PATH="$(__system_dotfiles_dir)/git-commands:$PATH"
