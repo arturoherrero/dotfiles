@@ -20,6 +20,7 @@ brew install docker docker-machine docker-compose
 brew install elixir
 brew install git
 brew install go
+brew install grip
 brew install hr
 brew install htop-osx
 brew install httpie
