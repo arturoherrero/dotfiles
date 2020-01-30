@@ -45,7 +45,6 @@
   autocorrect = 1
 [push]
   default = simple
-  followTags = true
 [pull]
   ff = only
 [merge]
