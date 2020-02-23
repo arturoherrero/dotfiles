@@ -36,6 +36,9 @@ alias nowdate='date +"%d-%m-%Y"'
 # Show PATH in a human-readable way
 alias path='tr ":" "\n" <<< $PATH'
 
+# Simple HTTP server
+alias simpleServer="python -m http.server"
+
 # Source the profile file
 alias sourceme="source ~/.profile"
 
