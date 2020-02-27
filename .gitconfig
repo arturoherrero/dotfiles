@@ -66,3 +66,5 @@
   sort = version:refname
 [rebase]
   autosquash = true
+[checkout]
+  defaultRemote = origin
