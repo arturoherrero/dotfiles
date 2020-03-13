@@ -24,6 +24,7 @@ brew install grip
 brew install hr
 brew install htop-osx
 brew install httpie
+brew install jq
 brew install kubectl
 brew install leiningen
 brew install mobile-shell

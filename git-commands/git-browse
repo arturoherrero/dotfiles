@@ -1,9 +1,29 @@
 #!/usr/bin/env bash
 
+# Open associated merge request based on the branch name.
+# Requires GITLAB_API_PRIVATE_TOKEN environment variable.
+__gitlab_browse() {
+  current_branch=$(git branch --show-current)
+
+  if [ "$current_branch" != "master"  ]; then
+    merge_request_iid=$(curl --silent --header "PRIVATE-TOKEN: $GITLAB_API_PRIVATE_TOKEN" "https://gitlab.com/api/v4/merge_requests?state=opened&source_branch=$current_branch" | jq -r ".[].iid")
+
+    if [ -n "$merge_request_iid" ]; then
+      open https:/gitlab.com/gitlab-org/gitlab/-/merge_requests/"$merge_request_iid"
+    else
+      open https://"$domain"/"$url"
+    fi
+  fi
+}
+
 # $ git browse
 # Open the project page in the default browser.
 # Same behaviour as GitHub with https://github.com/github/hub
 domain="$(git ls-remote --get-url | cut -c 5- | cut -d: -f1)"
 url="$(git ls-remote --get-url | cut -c 5- | cut -d: -f2)"
 
-open https://"$domain"/"$url"
+if [ "$domain" == "gitlab.com" ]; then
+  __gitlab_browse
+else
+  open https://"$domain"/"$url"
+fi
