@@ -119,6 +119,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'godlygeek/tabular'
+Plugin 'tyru/open-browser.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -143,3 +144,8 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
 
 " Use Ag with ack.vim
 let g:ackprg = 'ag --vimgrep'
+
+" Open browser
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
