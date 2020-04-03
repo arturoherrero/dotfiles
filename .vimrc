@@ -102,7 +102,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -120,6 +119,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'hashivim/vim-terraform'
 Plugin 'godlygeek/tabular'
 Plugin 'tyru/open-browser.vim'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -149,3 +149,8 @@ let g:ackprg = 'ag --vimgrep'
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
+
+" Use fzf in Vim
+set rtp+=/usr/local/opt/fzf
+" Map fzf to Ctrl-p
+nnoremap <C-p> :Files<Cr>

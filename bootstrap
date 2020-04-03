@@ -18,6 +18,7 @@ brew install bat
 brew install diff-so-fancy
 brew install docker docker-machine docker-compose
 brew install elixir
+brew install fzf
 brew install git
 brew install go
 brew install grip
