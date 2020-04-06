@@ -154,3 +154,10 @@ vmap gx <Plug>(openbrowser-smart-search)
 set rtp+=/usr/local/opt/fzf
 " Map fzf to Ctrl-p
 nnoremap <C-p> :Files<Cr>
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
+" Open horizontal and vertical split
+let g:fzf_action = { 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
+" Use the silver searcher instead of the default find command to traverse the
+" file system while respecting .gitignore
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
