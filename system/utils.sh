@@ -42,6 +42,11 @@ alias simpleServer="python -m http.server"
 # Source the profile file
 alias sourceme="source ~/.profile"
 
+# Create a new file and auto create the directory if not exist
+touchp() {
+  mkdir -p "$(dirname "$1")" && touch "$1"
+}
+
 # Update dotfiles
 updateme() {
   (cd "$(__system_dotfiles_dir)" && git pull)
