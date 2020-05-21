@@ -34,7 +34,7 @@ __system_git_push_confirmation_master_branch_force() {
 
 # $ git push
 __system_git_push() {
-  if [[ "$@" == "push -f"* || "$@" == "push --force"* ]]; then
+  if [[ "$*" == "push -f"* || "$*" == "push --force"* ]]; then
     __system_git_push_confirmation_master_branch_force "$@"
   else
     __system_git_push_creating_upstream_branch "$@"
