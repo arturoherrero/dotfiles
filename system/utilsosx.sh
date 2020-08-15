@@ -20,7 +20,7 @@ cdf() {
 
 # Generate a random password and copy to clipboard
 generate_password() {
-  LC_ALL=C tr -dc "[:alnum:]" < /dev/urandom | head -c 20 | pbcopy
+  LC_ALL=C tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c 32 | pbcopy
 }
 
 
