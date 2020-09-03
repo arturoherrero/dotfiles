@@ -73,6 +73,7 @@ brew cask install kap
 brew cask install karabiner-elements
 brew cask install keepingyouawake
 brew cask install kodi
+brew cask install lunar
 brew cask install macdown
 brew cask install minikube
 brew cask install openemu
