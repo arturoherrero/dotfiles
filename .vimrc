@@ -161,3 +161,5 @@ let g:fzf_action = { 'ctrl-s': 'split', 'ctrl-v': 'vsplit' }
 " Use the silver searcher instead of the default find command to traverse the
 " file system while respecting .gitignore
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" Layout down instead of a floating window
+let g:fzf_layout = { 'down': '~40%' }
