@@ -48,6 +48,7 @@ brew install gvar
 
 # Brew GUI Mac applications
 brew cask install alfred
+brew cask install appcleaner
 brew cask install authy
 brew cask install bettertouchtool
 brew cask install bitbar
@@ -59,6 +60,7 @@ brew cask install db-browser-for-sqlite
 brew cask install disk-inventory-x
 brew cask install docker
 brew cask install dropbox
+brew cask install epic-games
 brew cask install evernote
 brew cask install firefox
 brew cask install fromscratch
