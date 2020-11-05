@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# Find a file by name
-alias findit="find . -type f -name"
+# Find a file by name. $ fd name [directory]
+fd() {
+  find ${2-.} -type f -iname "*$1*"
+}
 
 # Short hash from regular hash
 hashify() {
