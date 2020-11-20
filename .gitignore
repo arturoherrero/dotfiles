@@ -2,9 +2,7 @@
 .DS_Store
 
 # Vim
-*.swn
-*.swo
-*.swp
+*.sw*
 
 # IntelliJ
 .idea/
