@@ -15,6 +15,8 @@ __system_git_push_creating_upstream_branch() {
   if [ "$stderr" == "$error" ]; then
     echo "↝ git push --set-upstream origin $current_branch"
     git push --set-upstream origin "$current_branch"
+  else
+    git "$@"
   fi
 }
 
