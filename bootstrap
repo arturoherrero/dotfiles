@@ -109,8 +109,8 @@ mvim +PluginInstall +qall
 mkdir ~/.vim/undodir
 
 defaults write -app MacVim NSUserKeyEquivalents '{
-  "Select Next Tab"="~@\Uf703";
-  "Select Previous Tab"="~@\Uf702";
+  "Show Next Tab"="~@\Uf703";
+  "Show Previous Tab"="~@\Uf702";
 }'
 
 
