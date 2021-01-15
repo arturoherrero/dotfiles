@@ -91,8 +91,8 @@ set undodir=~/.vim/undodir
 
 " Toggle spell checking, Ctrl-s
 nnoremap <C-s> :set spell!<ENTER>
-" Set region to British English
-set spelllang=en_gb
+" Set region to American English
+set spelllang=en_us
 
 " Vundle
 set nocompatible
