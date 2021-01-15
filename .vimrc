@@ -32,8 +32,8 @@ autocmd InsertLeave * :setlocal hlsearch
 " Becoming root to save a document, just type `w!!`
 cmap w!! %!sudo tee > /dev/null %
 
-" 80-column indication
-set colorcolumn=80
+" 80 and 120 column indications
+set colorcolumn=80,120
 
 " Not wrap lines
 set nowrap
