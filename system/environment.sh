@@ -46,13 +46,7 @@ export EDITOR=vim
 # Don't check mail when opening terminal
 unset MAILCHECK
 
-# Programmable completion for Bash 4.1+
-for completion in "/usr/local/etc/bash_completion.d/"*; do
-  source "$completion"
-done
-
-if [ -f "/usr/local/etc/profile.d/bash_completion.sh" ]; then
-  source "/usr/local/etc/profile.d/bash_completion.sh"
-fi
+# Bash completion 2
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 export CDPATH=".:~/projects"
