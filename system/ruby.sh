@@ -13,7 +13,8 @@ alias rubocop="bundle exec rubocop"
 alias jekyll="bundle exec jekyll server --livereload"
 
 # rbenv
-eval "$(rbenv init -)"
+eval "$(rbenv init --no-rehash -)"
+(rbenv rehash &) 2> /dev/null
 
 ruby_versions() {
   rbenv install -l

@@ -47,12 +47,12 @@ export EDITOR=vim
 unset MAILCHECK
 
 # Programmable completion for Bash 4.1+
-for completion in "$(brew --prefix)/etc/bash_completion.d/"*; do
+for completion in "/usr/local/etc/bash_completion.d/"*; do
   source "$completion"
 done
 
-if [ -f "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
-  source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+if [ -f "/usr/local/etc/profile.d/bash_completion.sh" ]; then
+  source "/usr/local/etc/profile.d/bash_completion.sh"
 fi
 
 export CDPATH=".:~/projects"

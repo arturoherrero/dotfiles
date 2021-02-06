@@ -2,7 +2,7 @@ source ~/.profile
 
 
 # Bash completion 2
-source $(brew --prefix)/share/bash-completion/bash_completion
+source /usr/local/share/bash-completion/bash_completion
 
 
 # iTerm2 Shell Integration
