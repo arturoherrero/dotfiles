@@ -37,8 +37,11 @@ shopt -s globstar
 # Match filenames in a case-insensitive fashion when performing filename expansion
 shopt -s nocaseglob
 
-# cd only autocompletes directories
+# cd comand only autocompletes directories
 complete -d cd
+
+# Define the base directory for cd command
+export CDPATH=".:~/projects"
 
 # EDITOR
 export EDITOR=vim
@@ -48,5 +51,3 @@ unset MAILCHECK
 
 # Bash completion 2
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-export CDPATH=".:~/projects"
