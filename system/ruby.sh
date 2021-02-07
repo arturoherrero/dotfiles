@@ -10,7 +10,7 @@ alias rspec="bundle exec rspec"
 alias rspec_parallel="rake parallel:spec"
 alias rubocop="bundle exec rubocop"
 
-alias jekyll="bundle exec jekyll server --livereload"
+alias jekyll="bundle exec jekyll server --livereload --incremental"
 
 # rbenv
 eval "$(rbenv init --no-rehash -)"
