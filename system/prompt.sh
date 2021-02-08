@@ -60,4 +60,35 @@ if [[ -n "$DOCKER_TERMINAL" ]]; then
   USR="docker"
 fi
 
-export PROMPT_COMMAND="history -a; __git_ps1 "'${USR_COLOR}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF} "\$ " "{%s}"'
+__system_prompt_git_status() {
+  git_status=$(git status --ahead-behind)
+  output=" "
+
+  if [[ $git_status == *"interactive rebase in progress"* ]]; then output="${RED}REBASE${OFF}"; fi
+  if [[ $git_status == *"Changes not staged for commit:"* ]]; then output+="${RED}*${OFF}"; fi
+  if [[ $git_status == *"Changes to be committed:"* ]]; then output+="${GREEN}+${OFF}"; fi
+  if [[ $git_status == *"Untracked files:"* ]]; then output+="${LRED}%${OFF}"; fi
+  if [[ $(git stash list) ]]; then output+="${LBLUE}\$${OFF}"; fi
+  if [[ $output == " " ]]; then output=""; fi
+
+  case $git_status in
+    *"Your branch is up to date with"*) output+="=";;
+    *"Your branch is ahead of"*) output+=">";;
+    *"Your branch is behind"*) output+="<";;
+    *"refer to different commits"*|*"have diverged"*) output+="<>";;
+  esac
+
+  echo "$output"
+}
+
+__system_prompt_inside_git() {
+  if [[ -d .git ]]; then
+    echo "{${GREEN}$(__system_git_current_branch)${OFF}$(__system_prompt_git_status)}"
+  fi
+}
+
+__system_prompt_command() {
+  PS1="${USR_COLOR}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF}$(__system_prompt_inside_git)\$ "
+}
+
+PROMPT_COMMAND="history -a; __system_prompt_command"
