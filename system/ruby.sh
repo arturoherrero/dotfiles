@@ -12,6 +12,9 @@ alias rubocop="bundle exec rubocop"
 
 alias jekyll="bundle exec jekyll server --livereload --incremental"
 
+alias devlog="tail -f log/development.log"
+alias testlog="tail -f log/test.log"
+
 # rbenv
 eval "$(rbenv init --no-rehash -)"
 (rbenv rehash &) 2> /dev/null
