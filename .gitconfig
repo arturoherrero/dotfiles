@@ -69,3 +69,5 @@
   autosquash = true
 [checkout]
   defaultRemote = origin
+[init]
+  defaultBranch = main
