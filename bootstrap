@@ -47,59 +47,59 @@ brew install gvar
 
 
 # Brew GUI Mac applications
-brew cask install alfred
-brew cask install appcleaner
-brew cask install authy
-brew cask install bettertouchtool
-brew cask install bitbar
-brew cask install calibre
-brew cask install cloud
-brew cask install cyberduck
-brew cask install dash
-brew cask install db-browser-for-sqlite
-brew cask install disk-inventory-x
-brew cask install docker
-brew cask install dropbox
-brew cask install epic-games
-brew cask install evernote
-brew cask install firefox
-brew cask install fromscratch
-brew cask install google-chrome
-brew cask install google-drive
-brew cask install imageoptim
-brew cask install intellij-idea-ce
-brew cask install iterm2
-brew cask install java
-brew cask install jdownloader
-brew cask install kap
-brew cask install karabiner-elements
-brew cask install keepingyouawake
-brew cask install kodi
-brew cask install lunar
-brew cask install macdown
-brew cask install minikube
-brew cask install openemu
-brew cask install postman
-brew cask install psequel
-brew cask install robomongo
-brew cask install sequel-pro
-brew cask install skype
-brew cask install slack
-brew cask install sourcetree
-brew cask install spotifree
-brew cask install spotify
-brew cask install steam
-brew cask install telegram-desktop
-brew cask install the-unarchiver
-brew cask install tomighty
-brew cask install tor-browser
-brew cask install vagrant
-brew cask install vagrant-manager
-brew cask install virtualbox
-brew cask install visual-studio-code
-brew cask install vlc
-brew cask install webtorrent
-brew cask install whatsapp
+brew install --cask alfred
+brew install --cask appcleaner
+brew install --cask authy
+brew install --cask bettertouchtool
+brew install --cask bitbar
+brew install --cask calibre
+brew install --cask cloud
+brew install --cask cyberduck
+brew install --cask dash
+brew install --cask db-browser-for-sqlite
+brew install --cask disk-inventory-x
+brew install --cask docker
+brew install --cask dropbox
+brew install --cask epic-games
+brew install --cask evernote
+brew install --cask firefox
+brew install --cask fromscratch
+brew install --cask google-chrome
+brew install --cask google-drive
+brew install --cask imageoptim
+brew install --cask intellij-idea-ce
+brew install --cask iterm2
+brew install --cask java
+brew install --cask jdownloader
+brew install --cask kap
+brew install --cask karabiner-elements
+brew install --cask keepingyouawake
+brew install --cask kodi
+brew install --cask lunar
+brew install --cask macdown
+brew install --cask minikube
+brew install --cask openemu
+brew install --cask postman
+brew install --cask psequel
+brew install --cask robomongo
+brew install --cask sequel-pro
+brew install --cask skype
+brew install --cask slack
+brew install --cask sourcetree
+brew install --cask spotifree
+brew install --cask spotify
+brew install --cask steam
+brew install --cask telegram-desktop
+brew install --cask the-unarchiver
+brew install --cask tomighty
+brew install --cask tor-browser
+brew install --cask vagrant
+brew install --cask vagrant-manager
+brew install --cask virtualbox
+brew install --cask visual-studio-code
+brew install --cask vlc
+brew install --cask webtorrent
+brew install --cask whatsapp
 
 
 # Install MacVim & configuration
@@ -116,7 +116,7 @@ defaults write -app MacVim NSUserKeyEquivalents '{
 
 
 # Install Atom & configuration
-brew cask install atom
+brew install --cask atom
 find "$(pwd)" -name "atom" -type d | xargs -I '{}' ln -s '{}' ~/.atom
 apm install package-sync
 
