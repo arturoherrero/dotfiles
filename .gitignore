@@ -6,3 +6,6 @@
 
 # IntelliJ
 .idea/
+
+# Npm packages
+node_modules/
