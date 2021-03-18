@@ -21,7 +21,7 @@
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
   lg5 = lg -5
-  merged = !git branch --merged origin/master | grep -v '^  master$'
+  merged = !git branch --merged origin/master | grep -v -e '^  master$' -e '^* master$'
   pair = !git commit -v -t ~/.gitpair
   push-branch = "!f() { git push --set-upstream $1 $(git branch --show-current); }; f"
   remotes = remote -v
