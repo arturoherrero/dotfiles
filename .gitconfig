@@ -27,7 +27,7 @@
   remotes = remote -v
   remove = "!f() { git branch -D $@; }; f"
   remove-local-merged = !git merged | xargs git remove
-  remove-remote-and-local = !git push origin --delete $1 && git branch -d $1 2>/dev/null
+  remove-remote-and-local = !git push origin --delete $1; git remove $1
   remove-remote-merged = !git remote update -p && git branch -r --merged origin/master | grep origin | grep -v master | cut -d"/" -f2- | xargs git push origin --delete
   st = status
   stashes = stash list
