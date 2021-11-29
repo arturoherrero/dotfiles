@@ -47,7 +47,6 @@ brew install gvar
 
 
 # Brew GUI Mac applications
-brew install --cask alfred
 brew install --cask appcleaner
 brew install --cask authy
 brew install --cask bettertouchtool
@@ -82,6 +81,7 @@ brew install --cask minikube
 brew install --cask openemu
 brew install --cask postman
 brew install --cask psequel
+brew install --cask raycast
 brew install --cask robomongo
 brew install --cask sequel-pro
 brew install --cask skype
