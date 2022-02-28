@@ -53,6 +53,7 @@ brew install --cask bettertouchtool
 brew install --cask bitbar
 brew install --cask calibre
 brew install --cask cloud
+brew install --cask coconutbattery
 brew install --cask cyberduck
 brew install --cask dash
 brew install --cask db-browser-for-sqlite
