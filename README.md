@@ -8,12 +8,42 @@ repository and the changes will be applied to the system.
 
 ![GitHub <-> dotfiles <- ~/$HOME](images/github-dotfiles-home.jpg)
 
-## Installation
+## Basic
 
-Clone the repository and run the bootstrap command:
+Scaled display: System Preferences -> Displays.
+
+## Prerequisites
+
+Install Homebrew:
 
 ```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Install Git:
+
+```shell
+brew install git
+```
+
+Create `projects` directory:
+
+```shell
+mkdir projects
+```
+
+## Installation
+
+Clone the repository:
+
+```shell
+cd projects
 git clone git@github.com:arturoherrero/dotfiles.git
+```
+
+Run the bootstrap command:
+
+```shell
 cd dotfiles
 sh bootstrap
 ```

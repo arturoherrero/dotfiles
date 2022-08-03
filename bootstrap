@@ -7,10 +7,6 @@ find "$(pwd)" -name ".*" -type f -maxdepth 1 | xargs -I '{}' ln -s '{}' ~
 git update-index --skip-worktree system/zcustom.sh
 
 
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-
 # Install formulas
 brew install autossh
 brew install bash-completion@2
