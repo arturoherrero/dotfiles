@@ -15,7 +15,6 @@ brew install diff-so-fancy
 brew install docker docker-machine docker-compose
 brew install elixir
 brew install fzf
-brew install git
 brew install go
 brew install grip
 brew install hr
@@ -35,6 +34,7 @@ brew install tree
 brew install webkit2png
 brew install wget
 brew install wifi-password
+brew install youtube-dl
 
 
 # Install my own formulas
@@ -51,8 +51,9 @@ brew install --cask calibre
 brew install --cask cloud
 brew install --cask coconutbattery
 brew install --cask cyberduck
-brew install --cask dash
 brew install --cask db-browser-for-sqlite
+brew install --cask deepl
+brew install --cask devdocs
 brew install --cask disk-inventory-x
 brew install --cask docker
 brew install --cask dropbox
@@ -62,10 +63,10 @@ brew install --cask firefox
 brew install --cask fromscratch
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install --cask grammarly
 brew install --cask hiddenbar
 brew install --cask imageoptim
 brew install --cask intellij-idea-ce
-brew install --cask iterm2
 brew install --cask java
 brew install --cask jdownloader
 brew install --cask kap
@@ -76,6 +77,7 @@ brew install --cask lunar
 brew install --cask macdown
 brew install --cask minikube
 brew install --cask openemu
+brew install --cask pop
 brew install --cask postman
 brew install --cask psequel
 brew install --cask raycast
@@ -113,7 +115,8 @@ defaults write -app MacVim NSUserKeyEquivalents '{
 }'
 
 
-# iTerm2: Install Shell Integration
+# iTerm2 with Shell Integration
+brew install --cask iterm2
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
 
