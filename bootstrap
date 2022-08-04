@@ -143,15 +143,18 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Save screenshots in jpg format.
 defaults write com.apple.screencapture type -string "jpg"
 
+# Disable the warning when changing a file extension.
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
 # Require password immediately after sleep or screen saver begins.
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Show battery life percentage.
+# Show battery life percentage on the menu bar.
 defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
-# Disable the warning when changing a file extension.
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+# Show bluetooth icon on the menu bar.
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Bluetooth -int 18
 
 
 # Dock
