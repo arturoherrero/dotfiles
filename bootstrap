@@ -117,6 +117,11 @@ defaults write -app MacVim NSUserKeyEquivalents '{
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
 
+# Install App Store applications
+brew install mas
+mas install 1274495053 # Microsoft To Do
+
+
 # Update Bash version
 brew install bash
 sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
