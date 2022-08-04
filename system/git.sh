@@ -13,6 +13,8 @@ __system_git_push_confirmation_master_branch_force() {
     if [[ $REPLY =~ ^(yes|y|Y)$ ]]; then
       git "$@"
     fi
+  else
+    git "$@"
   fi
 }
 
@@ -20,6 +22,8 @@ __system_git_push_confirmation_master_branch_force() {
 __system_git_push() {
   if [[ "$*" == "push -f"* || "$*" == "push --force"* ]]; then
     __system_git_push_confirmation_master_branch_force "$@"
+  else
+    git "$@"
   fi
 }
 
