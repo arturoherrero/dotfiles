@@ -123,26 +123,26 @@ sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
 chsh -s "$(brew --prefix)"/bin/bash
 
 
-# Prevent Time Machine from prompting to use new hard drives as backup volume
+# Prevent Time Machine from prompting to use new hard drives as backup volume.
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# Disable creation of metadata files on network volumes
+# Disable creation of metadata files (.DS_Store) on network volumes.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Disable creation of metadata files on USB volumes
+# Disable creation of metadata files (.DS_Store) on USB volumes.
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-# Change screenshots format
-defaults write com.apple.screencapture type jpg
+# Save screenshots in jpg format.
+defaults write com.apple.screencapture type -string "jpg"
 
-# Require password immediately after sleep or screen saver begins
+# Require password immediately after sleep or screen saver begins.
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Show battery life percentage.
 defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
-# Disable the warning when changing a file extension
+# Disable the warning when changing a file extension.
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 
