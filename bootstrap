@@ -151,10 +151,10 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Show battery life percentage on the menu bar.
-defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist BatteryShowPercentage -bool true
+defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
 # Show bluetooth icon on the menu bar.
-defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Bluetooth -int 18
+defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
 
 
 # Dock
