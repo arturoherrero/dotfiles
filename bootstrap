@@ -131,6 +131,12 @@ sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
 chsh -s "$(brew --prefix)"/bin/bash
 
 
+# Set the computer name
+COMPUTER_NAME="machine"
+sudo scutil --set HostName $COMPUTER_NAME
+sudo scutil --set LocalHostName $COMPUTER_NAME
+sudo scutil --set ComputerName $COMPUTER_NAME
+
 # Prevent Time Machine from prompting to use new hard drives as backup volume.
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
@@ -155,9 +161,6 @@ defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage 
 
 # Show bluetooth icon on the menu bar.
 defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
-
-
-# Dock
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
