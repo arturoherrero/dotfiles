@@ -15,7 +15,6 @@ brew install diff-so-fancy
 brew install docker docker-machine docker-compose
 brew install elixir
 brew install fzf
-brew install go
 brew install grip
 brew install hr
 brew install htop-osx
@@ -68,7 +67,6 @@ brew install --cask grammarly
 brew install --cask hiddenbar
 brew install --cask imageoptim
 brew install --cask intellij-idea-ce
-brew install --cask java
 brew install --cask jdownloader
 brew install --cask kap
 brew install --cask karabiner-elements
@@ -84,7 +82,6 @@ brew install --cask psequel
 brew install --cask raycast
 brew install --cask robomongo
 brew install --cask sequel-pro
-brew install --cask skype
 brew install --cask slack
 brew install --cask sourcetree
 brew install --cask spotifree
