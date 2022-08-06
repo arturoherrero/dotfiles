@@ -15,10 +15,6 @@ alias jekyll="bundle exec jekyll server --livereload"
 alias devlog="tail -f log/development.log"
 alias testlog="tail -f log/test.log"
 
-# rbenv
-eval "$(rbenv init --no-rehash -)"
-(rbenv rehash &) 2> /dev/null
-
 ruby_versions() {
   rbenv install -l
 }
