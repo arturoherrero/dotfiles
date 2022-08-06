@@ -61,6 +61,7 @@ brew install --cask epic-games
 brew install --cask evernote
 brew install --cask firefox
 brew install --cask fromscratch
+brew install --cask gitkraken
 brew install --cask google-chrome
 brew install --cask google-drive
 brew install --cask grammarly

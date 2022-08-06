@@ -24,6 +24,12 @@ generate_password() {
 }
 
 
+# Open the current location/repository with GitKraken
+gkraken() {
+  open gitkraken://repo/$PWD
+}
+
+
 # tailf - follow the growth of a log file
 tailf() {
   tail -f "$@"
