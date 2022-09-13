@@ -102,14 +102,12 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'mileszs/ack.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'guns/vim-clojure-static'
@@ -122,15 +120,6 @@ Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on
-
-" Show hidden files NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.swp$', '^\.git$', '^.DS_Store$', '^node_modules$', '^\.terragrunt-cache$', '^__pycache__$', '^.pytest_cache$']
-" Reveal file in NERDTree, Ctrl-a
-nmap <C-a> :NERDTreeFind<CR>
-" Configure NERDTree arrow symbols
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Rainbow Parentheses always on
 au VimEnter * RainbowParenthesesToggle
