@@ -116,6 +116,7 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'tyru/open-browser.vim'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
