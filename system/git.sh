@@ -29,7 +29,7 @@ __system_git_push() {
 
 # $ git clone
 __system_git_clone() {
-  name="${2##*/}"
+  name="${3:-${2##*/}}"
   git "$@" && cd "${name%.git}" || return
 }
 
