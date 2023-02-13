@@ -100,17 +100,8 @@ brew install --cask webtorrent
 brew install --cask whatsapp
 
 
-# Install MacVim & configuration
-brew install --cask macvim
-
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-mvim +PluginInstall +qall
+# Vim configuration
 mkdir ~/.vim/undodir
-
-defaults write -app MacVim NSUserKeyEquivalents '{
-  "Show Next Tab"="~@\Uf703";
-  "Show Previous Tab"="~@\Uf702";
-}'
 
 
 # iTerm2 with Shell Integration
