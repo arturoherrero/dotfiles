@@ -42,6 +42,7 @@ brew install gvar
 
 
 # Brew GUI Mac applications
+brew install --cask adobe-digital-editions
 brew install --cask appcleaner
 brew install --cask authy
 brew install --cask bettertouchtool
@@ -57,7 +58,6 @@ brew install --cask disk-inventory-x
 brew install --cask docker
 brew install --cask dropbox
 brew install --cask epic-games
-brew install --cask evernote
 brew install --cask firefox
 brew install --cask fromscratch
 brew install --cask gitkraken
@@ -75,6 +75,7 @@ brew install --cask kodi
 brew install --cask macdown
 brew install --cask minikube
 brew install --cask monitorcontrol
+brew install --cask nordvpn
 brew install --cask openemu
 brew install --cask pop
 brew install --cask postman
