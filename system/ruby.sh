@@ -14,7 +14,3 @@ alias jekyll="bundle exec jekyll server --livereload"
 
 alias devlog="tail -f log/development.log"
 alias testlog="tail -f log/test.log"
-
-ruby_versions() {
-  rbenv install -l
-}

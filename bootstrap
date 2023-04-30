@@ -8,6 +8,7 @@ git update-index --skip-worktree system/zcustom.sh
 
 
 # Install formulas
+brew install asdf
 brew install autossh
 brew install bash-completion@2
 brew install bat
@@ -25,7 +26,6 @@ brew install leiningen
 brew install mobile-shell
 brew install nmap
 brew install pstree
-brew install rbenv ruby-build
 brew install shellcheck
 brew install the_silver_searcher
 brew install tmux
