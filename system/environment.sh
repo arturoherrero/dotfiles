@@ -48,6 +48,3 @@ export EDITOR=vim
 
 # Don't check mail when opening terminal
 unset MAILCHECK
-
-# Bash completion 2
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
