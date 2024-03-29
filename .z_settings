@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+
+# ESC . to insert the last word of the previous command
+bindkey "\e." insert-last-word
+
+# Prepend cd to directory names automatically
+setopt autocd
+
+# Turns on spelling correction for commands
+setopt correct
+
+# Define the base directory for cd command. Bash CDPATH
+cdpath=(~/projects)
+
+# Load and initialize the Zsh completion system
+autoload -Uz compinit
+compinit
+
+# cd comand only autocompletes local directories
+zstyle ':completion:*:complete:(cd|pushd):*' tag-order 'local-directories named-directories'
+
+# Enable case-insensitive globbing
+setopt nocaseglob
+
+# Enable extendedglob option
+setopt extended_glob
+
+# Turns on interactive comments; comments begin with a #
+setopt interactive_comments
+
+# Prevents you from accidentally overwriting an existing file
+setopt noclobber
+
+# History
+export HISTSIZE=500000
+export SAVEHIST=100000
+export HISTORY_IGNORE="(exit|pwd|bg|fg|history|clear)"
+setopt append_history         # Enable appending history entries from all sessions to the history file
+setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
+setopt hist_ignore_dups       # ignore duplicated commands history list
+setopt hist_ignore_space      # ignore commands that start with space
+setopt hist_verify            # show command with history expansion to user before running it
+setopt share_history          # share command history data

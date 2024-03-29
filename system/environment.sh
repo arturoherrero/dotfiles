@@ -16,35 +16,5 @@ man() {
   man "$@"
 }
 
-# Prepend cd to directory names automatically
-shopt -s autocd
-
-# This allows you to bookmark your favorite places across the file system
-shopt -s cdable_vars
-
-# Correct spelling errors in arguments supplied to cd
-shopt -s cdspell
-
-# Checks the window size after each command
-shopt -s checkwinsize
-
-# Correct spelling errors during tab-completion
-shopt -s dirspell
-
-# Turn on recursive globbing (enables ** to recurse all directories)
-shopt -s globstar
-
-# Match filenames in a case-insensitive fashion when performing filename expansion
-shopt -s nocaseglob
-
-# cd comand only autocompletes directories
-complete -d cd
-
-# Define the base directory for cd command
-export CDPATH=".:~/projects"
-
 # EDITOR
 export EDITOR=vim
-
-# Don't check mail when opening terminal
-unset MAILCHECK
