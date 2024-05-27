@@ -6,3 +6,7 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 source ~/.profile
 source ~/.bash_settings
+
+for file in $(__system_dotfiles_dir)/system_bash/*; do
+  source $file
+done
