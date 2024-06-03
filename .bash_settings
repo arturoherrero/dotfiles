@@ -26,6 +26,7 @@ complete -d cd
 
 # Define the base directory for cd command
 export CDPATH=".:~/projects"
+complete -o nospace -F _cd cd
 
 # Don't check mail when opening terminal
 unset MAILCHECK
