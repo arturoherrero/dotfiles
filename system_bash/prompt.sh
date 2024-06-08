@@ -88,6 +88,7 @@ __system_prompt_inside_git() {
 }
 
 __system_prompt_command() {
+  echo -ne "\033]50;CurrentDir=$PWD\a"
   PS1="${USR_COLOR}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF}$(__system_prompt_inside_git)\$ "
 }
 
