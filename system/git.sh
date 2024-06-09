@@ -34,9 +34,9 @@ __system_git_clone() {
 }
 
 __system_git() {
-  if [ "$1" == "push" ]; then
+  if [[ "$1" == "push" ]]; then
     __system_git_push "$@"
-  elif [ "$1" == "clone" ]; then
+  elif [[ "$1" == "clone" ]]; then
     __system_git_clone "$@"
   else
     git "$@"
