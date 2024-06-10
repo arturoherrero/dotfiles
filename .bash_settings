@@ -3,9 +3,6 @@
 # Prepend cd to directory names automatically
 shopt -s autocd
 
-# This allows you to bookmark your favorite places across the file system
-shopt -s cdable_vars
-
 # Correct spelling errors in arguments supplied to cd
 shopt -s cdspell
 
@@ -21,12 +18,8 @@ shopt -s globstar
 # Match filenames in a case-insensitive fashion when performing filename expansion
 shopt -s nocaseglob
 
-# cd comand only autocompletes directories
-complete -d cd
-
 # Define the base directory for cd command
 export CDPATH=".:~/projects"
-complete -o nospace -F _cd cd
 
 # Don't check mail when opening terminal
 unset MAILCHECK
