@@ -9,3 +9,5 @@ done
 
 # asdf
 test -e "$(brew --prefix asdf)/libexec/asdf.sh" && source "$(brew --prefix asdf)/libexec/asdf.sh"
+
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc

@@ -26,6 +26,7 @@ brew install leiningen
 brew install mobile-shell
 brew install nmap
 brew install pstree
+brew install ripgrep
 brew install shellcheck
 brew install the_silver_searcher
 brew install tmux
