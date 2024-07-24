@@ -5,6 +5,9 @@
 # Search hidden files / directories (e.g. dotfiles) by default
 --hidden
 
+# Using glob patterns to include/exclude files or folders
+--glob=!.git/*
+
 # Set the colors. How do I make the output look like The Silver Searcher's output?
 # https://github.com/BurntSushi/ripgrep/blob/master/FAQ.md#how-do-i-make-the-output-look-like-the-silver-searchers-output
 --colors=line:fg:yellow
