@@ -55,11 +55,6 @@ export GIT_PS1_SHOWUPSTREAM="auto git"
 export GIT_PS1_DESCRIBE_STYLE="branch"
 export PROMPT_DIRTRIM=2
 
-if [[ -n "$DOCKER_TERMINAL" ]]; then
-  USR_COLOR=$CYAN
-  USR="docker"
-fi
-
 __system_prompt_git_status() {
   git_status=$(git status --ahead-behind)
   output=" "
