@@ -64,7 +64,6 @@ brew install --cask fromscratch
 brew install --cask gitkraken
 brew install --cask google-chrome
 brew install --cask google-drive
-brew install --cask grammarly
 brew install --cask hiddenbar
 brew install --cask imageoptim
 brew install --cask intellij-idea-ce
