@@ -19,7 +19,7 @@ shopt -s globstar
 shopt -s nocaseglob
 
 # Define the base directory for cd command
-export CDPATH=".:~/projects"
+CDPATH=".:~/projects"
 
 # Don't check mail when opening terminal
 unset MAILCHECK
