@@ -2,7 +2,7 @@
 
 # Find a file by name. $ fd name [directory]
 fd() {
-  find ${2-.} -type f -iname "*$1*"
+  find "${2-.}" -type f -path "*$1*"
 }
 
 # Short hash from regular hash
