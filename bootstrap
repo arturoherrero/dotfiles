@@ -48,6 +48,7 @@ brew install --cask appcleaner
 brew install --cask authy
 brew install --cask bettertouchtool
 brew install --cask bitbar
+brew install --cask blackhole-2ch
 brew install --cask calibre
 brew install --cask cloud
 brew install --cask coconutbattery
