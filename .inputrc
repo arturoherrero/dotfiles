@@ -26,8 +26,8 @@ set page-completions off
 set completion-query-items 200
 
 # Enable incremental history search with Alt + up/down arrows
-"\e\e[A": history-search-backward
-"\e\e[B": history-search-forward
+"\e[1;3A": history-search-backward
+"\e[1;3B": history-search-forward
 
 # Enable moving on the readline by word Alt + left/right arrows
 "\e\e[C": forward-word
