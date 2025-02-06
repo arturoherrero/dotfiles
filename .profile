@@ -7,7 +7,8 @@ for file in $(__system_dotfiles_dir)/system/*; do
   source $file
 done
 
-# asdf
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+# mise
+eval "$(/opt/homebrew/bin/mise hook-env)"
 
+# rg / ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc

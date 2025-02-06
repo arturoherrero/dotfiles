@@ -8,6 +8,9 @@ export HOMEBREW_NO_ENV_HINTS=1
 # Bash completion 2
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
+# mise
+eval "$(/opt/homebrew/bin/mise activate bash)"
+
 source ~/.profile
 source ~/.bash_settings
 
