@@ -8,6 +8,6 @@ for file in $(__system_dotfiles_dir)/system/*; do
 done
 
 # asdf
-test -e "$(brew --prefix asdf)/libexec/asdf.sh" && source "$(brew --prefix asdf)/libexec/asdf.sh"
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
