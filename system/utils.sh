@@ -33,7 +33,8 @@ alias mkdircd=mcd
 
 # Time && Date
 alias now='date +"%T"'
-alias nowdate='date +"%d-%m-%Y"'
+alias nowdate='date +"%d %B %Y"'
+alias nowweek='date +"%V"'
 
 # Show PATH in a human-readable way
 alias path='tr ":" "\n" <<< $PATH'
