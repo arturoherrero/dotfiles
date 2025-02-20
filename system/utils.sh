@@ -39,6 +39,13 @@ alias nowweek='date +"%V"'
 # Show PATH in a human-readable way
 alias path='tr ":" "\n" <<< $PATH'
 
+# Remove lines from files
+remove_lines() {
+    pattern=$1
+    escaped_pattern=$(echo "$pattern" | sed 's/\//\\\//g')
+    git grep -l "$pattern" | xargs sed -i '' "/$escaped_pattern/d"
+}
+
 # Simple HTTP server
 alias simpleServer="python -m http.server"
 
