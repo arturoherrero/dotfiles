@@ -1,15 +1,13 @@
 [user]
   name = Arturo Herrero
   email = arturo.herrero@gmail.com
-[color]
-  ui = auto
 [alias]
   amend = commit --amend --no-edit
   br = branch
   branches = branch -a
-  ca = !git add -A && git commit -v
+  ca = !git add -A && git commit
   cap = !git add -A && git pair
-  ci = commit -v
+  ci = commit
   co = checkout
   cob = checkout -b
   diffs = diff --staged
@@ -22,7 +20,7 @@
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
   lg5 = lg -5
   merged = !git branch --merged origin/master | grep -v -e '^  master$' -e '^* master$'
-  pair = !git commit -v -t ~/.gitpair
+  pair = !git commit -t ~/.gitpair
   push-branch = "!f() { git push --set-upstream $1 $(git branch --show-current); }; f"
   remotes = remote -v
   remove = "!f() { git branch -D $@; }; f"
@@ -37,21 +35,11 @@
   tags = tag -l
   undo = reset HEAD^ --mixed
   unstage = reset HEAD --
-  up = "!git remote update -p; git merge --ff-only @{u}"
-[core]
-  excludesfile = ~/.gitignore
-  whitespace = tab-in-indent
-  pager = diff-so-fancy | less --tabs=4 -RFX
-[help]
-  autocorrect = 1
-[push]
-  default = simple
-  autoSetupRemote = true
-[pull]
-  ff = only
-[merge]
-  ff = only
-  log = true
+  up = "!git fetch; git merge --ff-only @{u}"
+[branch]
+  sort = -committerdate
+[checkout]
+  defaultRemote = origin
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
@@ -64,11 +52,36 @@
   old = red bold
   new = green bold
   whitespace = red reverse
-[tag]
-  sort = version:refname
+[commit]
+  verbose = true
+[core]
+  excludesfile = ~/.gitignore
+  whitespace = tab-in-indent
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+[fetch]
+  prune = true
+  pruneTags = true
+[help]
+  autocorrect = prompt
+[init]
+  defaultBranch = master
+[merge]
+  ff = only
+  log = true
+[push]
+  autoSetupRemote = true
+  followTags = true
+[pull]
+  ff = only
 [rebase]
   autosquash = true
-[checkout]
-  defaultRemote = origin
-[init]
-  defaultBranch = main
+  autoStash = true
+  updateRefs = true
+[rerere]
+  enabled = true
+  autoupdate = true
+[tag]
+  sort = version:refname
