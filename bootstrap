@@ -11,29 +11,25 @@ git update-index --skip-worktree system/zcustom.sh
 brew install autossh
 brew install bash-completion@2
 brew install bat
+brew install btop
 brew install diff-so-fancy
 brew install docker docker-compose colima
-brew install elixir
 brew install fzf
 brew install grip
 brew install hr
-brew install htop-osx
 brew install httpie
 brew install jq
 brew install kubectl
-brew install leiningen
 brew install mise
-brew install mobile-shell
 brew install nmap
 brew install pstree
 brew install ripgrep
 brew install shellcheck
 brew install tmux
 brew install tree
-brew install webkit2png
 brew install wget
 brew install wifi-password
-brew install youtube-dl
+brew install yt-dlp
 
 
 # Install my own formulas
@@ -46,29 +42,25 @@ brew install --cask adobe-digital-editions
 brew install --cask appcleaner
 brew install --cask authy
 brew install --cask bettertouchtool
-brew install --cask bitbar
+brew install --cask xbar
 brew install --cask blackhole-2ch
 brew install --cask calibre
-brew install --cask cloud
 brew install --cask coconutbattery
 brew install --cask cyberduck
 brew install --cask db-browser-for-sqlite
 brew install --cask deepl
 brew install --cask devdocs
-brew install --cask disk-inventory-x
-brew install --cask docker
 brew install --cask dropbox
 brew install --cask epic-games
 brew install --cask firefox
-brew install --cask fromscratch
 brew install --cask gitkraken
 brew install --cask google-chrome
 brew install --cask google-drive
+brew install --cask grandperspective
 brew install --cask hiddenbar
 brew install --cask imageoptim
 brew install --cask intellij-idea-ce
 brew install --cask jdownloader
-brew install --cask kap
 brew install --cask karabiner-elements
 brew install --cask keepingyouawake
 brew install --cask kodi
@@ -77,23 +69,15 @@ brew install --cask minikube
 brew install --cask monitorcontrol
 brew install --cask nordvpn
 brew install --cask openemu
-brew install --cask pop
 brew install --cask postman
-brew install --cask psequel
 brew install --cask raycast
-brew install --cask robomongo
-brew install --cask sequel-pro
 brew install --cask slack
 brew install --cask sourcetree
-brew install --cask spotifree
 brew install --cask spotify
 brew install --cask steam
 brew install --cask telegram-desktop
 brew install --cask the-unarchiver
-brew install --cask tomighty
 brew install --cask tor-browser
-brew install --cask vagrant
-brew install --cask vagrant-manager
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask vlc
