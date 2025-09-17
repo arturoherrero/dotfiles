@@ -1,16 +1,16 @@
 # $HOME sweet ~/
 
-Common shell stuff, dotfiles and little utilities.
+Personal development setup with shell configurations, dotfiles, and utilities.
 
-All the dotfiles in ~/$HOME are symbolic links with the corresponding file to
-this repository. Therefore, I can now modify the files directly in this
-repository and the changes will be applied to the system.
+The dotfiles are symlinked from this repository to the home directory,
+so the changes here automatically apply to the system.
 
 ![GitHub <-> dotfiles <- ~/$HOME](images/github-dotfiles-home.jpg)
 
-## Basic
+## Before starting
 
-Scaled display: System Preferences -> Displays.
+* Scaled display: System Preferences -> Displays.
+* SSH setup: Copy `~/.ssh/config` and private keys.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ Install Git:
 brew install git
 ```
 
-Create `projects` directory:
+Create development directory:
 
 ```shell
 mkdir projects
@@ -62,11 +62,9 @@ updateme
 Using `system/zcustom.sh` file, I can add any custom configuration that is not
 going to be persisted in the repository.
 
-
 ## Who made this?
 
-This was made by Arturo Herrero under the MIT License. Find me on Twitter
-[@ArturoHerrero][1].
+This was made by [Arturo Herrero][1] under the MIT License.
 
 
-[1]: https://twitter.com/ArturoHerrero
+[1]: https://arturoherrero.com/
