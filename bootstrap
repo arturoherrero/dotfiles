@@ -7,7 +7,7 @@ find "$(pwd)" -name ".*" -type f -maxdepth 1 | xargs -I '{}' ln -s '{}' ~
 git update-index --skip-worktree system/zcustom.sh
 
 
-# Install formulas
+# Install Brew formulas
 brew install autossh
 brew install bash-completion@2
 brew install bat
@@ -85,11 +85,7 @@ brew install --cask webtorrent
 brew install --cask whatsapp
 
 
-# Vim configuration
-mkdir ~/.vim/undodir
-
-
-# iTerm2 with Shell Integration
+# Install iTerm2 with Shell Integration
 brew install --cask iterm2
 curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
@@ -99,10 +95,14 @@ brew install mas
 mas install 1274495053 # Microsoft To Do
 
 
-# Update Bash version
+# Install Bash as default shell
 brew install bash
 sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
 chsh -s "$(brew --prefix)"/bin/bash
+
+
+# Vim configuration
+mkdir ~/.vim/undodir
 
 
 # Set the computer name
@@ -111,59 +111,63 @@ sudo scutil --set HostName $COMPUTER_NAME
 sudo scutil --set LocalHostName $COMPUTER_NAME
 sudo scutil --set ComputerName $COMPUTER_NAME
 
-# Prevent Time Machine from prompting to use new hard drives as backup volume.
+
+# Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# Disable creation of metadata files (.DS_Store) on network volumes.
+# Disable creation of metadata files (.DS_Store) on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-# Disable creation of metadata files (.DS_Store) on USB volumes.
+# Disable creation of metadata files (.DS_Store) on USB volumes
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-# Save screenshots in jpg format.
+
+# Save screenshots in jpg format
 defaults write com.apple.screencapture type -string "jpg"
 
-# Disable the warning when changing a file extension.
+# Disable the warning when changing a file extension
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Require password immediately after sleep or screen saver begins.
+
+# Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-# Show battery life percentage on the menu bar.
+
+# Show battery life percentage on the menu bar
 defaults -currentHost write com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
-# Show bluetooth icon on the menu bar.
+# Show bluetooth icon on the menu bar
 defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
+
 
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
-# Add Documents folder to the Documents side of the Dock.
+
+# Add Documents folder to the Dock
 defaults write com.apple.dock persistent-others -array-add "\
 <dict>\
   <key>tile-data</key>\
     <dict>\
       <key>file-data</key>\
         <dict>\
-          <key>_CFURLString</key> <string>file:///Users/arturo/Documents/</string>\
+          <key>_CFURLString</key> <string>file:///$HOME/Documents/</string>\
           <key>_CFURLStringType</key> <integer>15</integer>\
         </dict>\
-
       <key>file-type</key> <integer>2</integer>\
       <key>showas</key> <integer>1</integer>\
     </dict>\
-
   <key>tile-type</key> <string>directory-tile</string>\
 </dict>"
 
-# Remove items located on the Applications side of the Dock.
+# Remove items located on the Applications side of the Dock
 defaults write com.apple.dock persistent-apps -array
 
-# Automatically hide the dock.
+# Automatically hide the dock
 defaults write com.apple.dock autohide -bool true
 
-# Don't show recent items.
+# Don't show recent items
 defaults write com.apple.dock show-recents -bool false
 
 killall Dock
