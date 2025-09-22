@@ -79,7 +79,6 @@ brew install --cask telegram-desktop
 brew install --cask the-unarchiver
 brew install --cask tor-browser
 brew install --cask virtualbox
-brew install --cask visual-studio-code
 brew install --cask vlc
 brew install --cask webtorrent
 brew install --cask whatsapp
@@ -100,6 +99,11 @@ mas install 417375580 # BetterSnapTool
 brew install bash
 sudo bash -c "echo $(brew --prefix)/bin/bash >> /etc/shells"
 chsh -s "$(brew --prefix)"/bin/bash
+
+
+# VSCode configuration
+brew install --cask visual-studio-code
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 
 # Vim configuration
