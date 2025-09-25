@@ -84,7 +84,11 @@ __system_prompt_inside_git() {
 
 __system_prompt_command() {
   echo -ne "\033]50;CurrentDir=$PWD\a"
-  PS1="\[$(iterm2_prompt_mark)\]${USR_COLOR}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF}$(__system_prompt_inside_git)\$ "
+  PS1="\[$(iterm2_prompt_mark)\]${INCOGNITO}${USR_COLOR}${USR}${OFF}@${HOST}:${LPURPLE}${DIR}${OFF}$(__system_prompt_inside_git)\$ "
 }
 
 PROMPT_COMMAND="history -a; __system_prompt_command"
+
+incognito() {
+  env HISTFILE=/dev/null INCOGNITO="[${RED}⌐■_■${OFF}] " bash -l
+}
