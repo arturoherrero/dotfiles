@@ -14,6 +14,7 @@ brew install bat
 brew install btop
 brew install diff-so-fancy
 brew install docker docker-compose colima
+brew install eza
 brew install fzf
 brew install grip
 brew install hr
@@ -26,7 +27,6 @@ brew install pstree
 brew install ripgrep
 brew install shellcheck
 brew install tmux
-brew install tree
 brew install wget
 brew install wifi-password
 brew install yt-dlp
