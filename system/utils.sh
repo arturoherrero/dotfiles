@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Compression
+compress() {
+  tar -czf "${1%/}.tar.gz" "${1%/}"
+}
+alias decompress="tar -xzf"
+
 # Find a file by name. $ fd name [directory]
 fd() {
   find "${2-.}" -type f -path "*$1*" -exec bash -c 'printf "%s\n" "$1" | grep --color=auto "$2"' _ {} "$1" \;
