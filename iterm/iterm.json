@@ -25,11 +25,7 @@
     "Red Component" : 1,
     "Blue Component" : 0.99215690000000001
   },
-  "Ansi 2 Color" : {
-    "Green Component" : 1,
-    "Red Component" : 0.65882350000000001,
-    "Blue Component" : 0.37647059999999999
-  },
+  "Horizontal Spacing" : 1,
   "Rows" : 25,
   "Default Bookmark" : "No",
   "Ansi 4 Color" : {
@@ -129,7 +125,7 @@
   "Keyboard Map" : {
 
   },
-  "Window Type" : 0,
+  "Window Type" : 15,
   "Background Image Location" : "",
   "Blur" : false,
   "Badge Color" : {
@@ -166,12 +162,12 @@
     "Blue Component" : 0.37647059999999999
   },
   "Transparency" : 0,
-  "Ansi 0 Color" : {
-    "Green Component" : 0.30978869999999997,
-    "Red Component" : 0.30978869999999997,
-    "Blue Component" : 0.30978869999999997
+  "Guid" : "78187971-9913-4BE7-8CB3-0BC6CB2B5BD3",
+  "Ansi 2 Color" : {
+    "Green Component" : 1,
+    "Red Component" : 0.65882350000000001,
+    "Blue Component" : 0.37647059999999999
   },
-  "Custom Directory" : "Recycle",
   "Link Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
@@ -179,12 +175,16 @@
     "Alpha Component" : 1,
     "Green Component" : 0.35915297269821167
   },
-  "Guid" : "78187971-9913-4BE7-8CB3-0BC6CB2B5BD3",
-  "Set Local Environment Vars" : 2,
   "Ansi 1 Color" : {
     "Green Component" : 0.4235294,
     "Red Component" : 1,
     "Blue Component" : 0.37647059999999999
+  },
+  "Set Local Environment Vars" : 2,
+  "Ansi 0 Color" : {
+    "Green Component" : 0.30978869999999997,
+    "Red Component" : 0.30978869999999997,
+    "Blue Component" : 0.30978869999999997
   },
   "Ansi 7 Color" : {
     "Green Component" : 0.93353169999999996,
@@ -206,5 +206,5 @@
     "Red Component" : 1,
     "Blue Component" : 0.71372550000000001
   },
-  "Horizontal Spacing" : 1
+  "Custom Directory" : "Recycle"
 }
