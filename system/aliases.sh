@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias cd..="cd .."
 
-alias ls="eza"
+alias ls="eza --group-directories-first"
 alias la="ls -a"
 alias ll="ls -la"
 alias tree="eza --tree"
