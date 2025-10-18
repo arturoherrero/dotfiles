@@ -38,3 +38,9 @@ set completion-query-items 200
 $if Bash
   Space: magic-space
 $endif
+
+# Coloring tab completions
+set colored-stats on
+
+# Show completions immediately on ambiguity (no double-tab needed)
+set show-all-if-ambiguous on
