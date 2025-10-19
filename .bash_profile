@@ -11,6 +11,12 @@ export HOMEBREW_NO_ENV_HINTS=1
 # mise
 eval "$(/opt/homebrew/bin/mise activate bash)"
 
+# fzf
+# CTRL-t = fzf select
+# CTRL-r = fzf history
+eval "$(fzf --bash)"
+export FZF_DEFAULT_OPTS="--layout reverse --border --margin 3%"
+
 source ~/.profile
 source ~/.bash_settings
 

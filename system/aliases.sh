@@ -13,6 +13,8 @@ alias lt="eza --tree -L2"
 alias df="df -h"
 alias du="du -h"
 
+alias ff="fzf --preview 'bat --color=always {}'"
+
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
