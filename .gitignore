@@ -9,3 +9,6 @@
 
 # Npm packages
 node_modules/
+
+# GitLab Duo custom rules
+.gitlab/duo/chat-rules.md
