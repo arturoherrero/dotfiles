@@ -14,6 +14,7 @@ brew install bat
 brew install btop
 brew install diff-so-fancy
 brew install docker docker-compose colima
+brew install dysk
 brew install eza
 brew install fzf
 brew install grip
