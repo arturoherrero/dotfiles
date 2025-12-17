@@ -20,6 +20,7 @@
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
   lg5 = lg -5
   merged = "!f() { base=$(git rev-parse --verify origin/main >/dev/null 2>&1 && echo main || echo master); git fetch -p >/dev/null 2>&1; git branch -vv | grep ': gone]' | awk '{print $1}'; }; f"
+  nuke = reset --hard HEAD^
   pair = !git commit -t ~/.gitpair
   push-branch = "!f() { git push --set-upstream $1 $(git branch --show-current); }; f"
   remotes = remote -v
