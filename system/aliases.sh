@@ -3,6 +3,7 @@
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias cd..="cd .."
+alias cd...="cd ../.."
 
 alias ls="eza --group-directories-first"
 alias la="ls -a"
