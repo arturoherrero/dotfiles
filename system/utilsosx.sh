@@ -36,7 +36,8 @@ tailf() {
 }
 
 
-# Move to the trash
+# Move to the trash, ignoring flags like -rf
 trash() {
-  mv "$@" ~/.Trash
+  while [[ "$1" == -* ]]; do shift; done
+  [ $# -gt 0 ] && mv "$@" ~/.Trash
 }
