@@ -22,6 +22,6 @@ alias fgrep="fgrep --color=auto"
 
 alias mount="mount | column -t"
 
-alias where=which
-
 alias vi=vim
+
+alias where=which
