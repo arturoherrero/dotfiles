@@ -41,3 +41,14 @@ trash() {
   while [[ "$1" == -* ]]; do shift; done
   [ $# -gt 0 ] && mv "$@" ~/.Trash
 }
+
+
+# Get current WiFi SSID and password
+wifi-password() {
+  local ssid
+  local password
+  ssid="$(networksetup -listpreferredwirelessnetworks en0 | grep -v "^Preferred networks on" | head -1 | xargs)"
+  password="$(security find-generic-password -ga "$ssid" -w 2>/dev/null)"
+  echo "SSID:     $ssid"
+  echo "Password: $password"
+}

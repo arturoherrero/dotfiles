@@ -29,7 +29,6 @@ brew install ripgrep
 brew install shellcheck
 brew install tmux
 brew install wget
-brew install wifi-password
 brew install yt-dlp
 
 
