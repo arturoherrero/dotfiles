@@ -2,7 +2,7 @@
 
 # Battery time remaining
 battery() {
-  pmset -g batt | egrep "([0-9]+\%).*" -o --colour=auto | cut -f3 -d';' | cut -f2 -d' '
+  pmset -g batt | grep -Eo "([0-9]+\%).*" | cut -f3 -d';' | cut -f2 -d' '
 }
 
 
