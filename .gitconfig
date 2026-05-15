@@ -14,8 +14,8 @@
   discard = "!git reset --hard origin/$(git branch --show-current)"
   head = checkout -- .
   hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
-  integrate = !git checkout master && git merge $1 && git push && git remove-remote-and-local $1
-  jump = !git stash && git checkout $1 && shift && git stash pop
+  integrate = "!f() { base=$(git rev-parse --verify origin/main >/dev/null 2>&1 && echo main || echo master); git checkout $base && git merge $1 && git push && git remove-remote-and-local $1; }; f"
+  jump = "!f() { git stash && git checkout $1 && git stash pop; }; f"
   last = log -1 HEAD
   lg = log --graph --pretty=format:'%C(auto)%h %s %C(bold blue)<%an>'
   lg5 = lg -5
@@ -26,8 +26,8 @@
   remotes = remote -v
   remove = "!f() { git branch -D $@; }; f"
   remove-local-merged = !git merged | xargs git remove
-  remove-remote-and-local = !git push origin --delete $1; git remove $1
-  remove-remote-merged = !git remote update -p && git branch -r --merged origin/master | grep origin | grep -v master | cut -d"/" -f2- | xargs git push origin --delete
+  remove-remote-and-local = "!f() { git push origin --delete $1 && git remove $1; }; f"
+  remove-remote-merged = "!f() { base=$(git rev-parse --verify origin/main >/dev/null 2>&1 && echo main || echo master); git remote update -p && git branch -r --merged origin/$base | grep origin | grep -v $base | cut -d/ -f2- | xargs git push origin --delete; }; f"
   st = status
   stashes = stash list
   stashp = stash pop

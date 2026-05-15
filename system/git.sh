@@ -4,12 +4,18 @@ __system_git_current_branch() {
   git branch --show-current
 }
 
+__system_git_default_branch() {
+  git rev-parse --verify origin/main >/dev/null 2>&1 && echo main || echo master
+}
+
 # git push -f
 # git push --force
-# Show a confirmation when forcing a push on master branch.
+# Show a confirmation when forcing a push on the default branch.
 __system_git_push_confirmation_master_branch_force() {
-  if [ "$(__system_git_current_branch)" == "master" ]; then
-    read -p "Force pushing to master branch. Are you sure? " -r
+  local default
+  default=$(__system_git_default_branch)
+  if [ "$(__system_git_current_branch)" == "$default" ]; then
+    read -p "Force pushing to $default branch. Are you sure? " -r
     if [[ $REPLY =~ ^(yes|y|Y)$ ]]; then
       git "$@"
     fi
