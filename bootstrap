@@ -45,6 +45,9 @@ brew install --cask bettertouchtool
 brew install --cask xbar
 brew install --cask blackhole-2ch
 brew install --cask calibre
+brew install --cask chatgpt
+brew install --cask claude
+brew install --cask claude-code
 brew install --cask coconutbattery
 brew install --cask cyberduck
 brew install --cask db-browser-for-sqlite
