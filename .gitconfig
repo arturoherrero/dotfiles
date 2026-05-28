@@ -76,6 +76,7 @@
 [merge]
   ff = only
   log = true
+  conflictstyle = zdiff3
 [push]
   autoSetupRemote = true
   followTags = true
