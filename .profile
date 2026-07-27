@@ -3,7 +3,9 @@ __system_dotfiles_dir() {
   dirname "$(readlink ~/.profile)"
 }
 
-for file in $(__system_dotfiles_dir)/system/*; do
+export DOTFILES_DIR="$(__system_dotfiles_dir)"
+
+for file in "$DOTFILES_DIR"/system/*; do
   source $file
 done
 

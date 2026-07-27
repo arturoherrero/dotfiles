@@ -65,5 +65,5 @@ touchp() {
 
 # Update dotfiles
 updateme() {
-  (cd "$(__system_dotfiles_dir)" && git pull)
+  (cd "$DOTFILES_DIR" && git pull)
 }

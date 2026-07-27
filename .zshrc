@@ -5,6 +5,6 @@ eval "$(/opt/homebrew/bin/mise activate zsh)"
 source ~/.profile
 source ~/.z_settings
 
-for file in $(__system_dotfiles_dir)/system_zsh/*; do
+for file in "$DOTFILES_DIR"/system_zsh/*; do
   source $file
 done

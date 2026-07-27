@@ -20,6 +20,6 @@ export FZF_DEFAULT_OPTS="--layout reverse --border --margin 3%"
 source ~/.profile
 source ~/.bash_settings
 
-for file in $(__system_dotfiles_dir)/system_bash/*; do
+for file in "$DOTFILES_DIR"/system_bash/*; do
   source $file
 done

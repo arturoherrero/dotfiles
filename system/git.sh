@@ -67,4 +67,4 @@ _git_co() {
   __gitcomp_nl "$(__git_heads)"
 }
 
-export PATH="$(__system_dotfiles_dir)/git-commands:$PATH"
+export PATH="$DOTFILES_DIR/git-commands:$PATH"
