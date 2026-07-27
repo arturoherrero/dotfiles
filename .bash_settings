@@ -36,7 +36,7 @@ shopt -s lithist
 
 # Huge history. Doesn't appear to slow things down, so why not?
 export HISTSIZE=500000
-export HISTFILESIZE=100000
+export HISTFILESIZE=500000
 
 # Avoid duplicate entries
 export HISTCONTROL=ignoreboth
