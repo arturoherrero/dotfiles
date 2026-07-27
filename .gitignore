@@ -1,10 +1,8 @@
 # macOS
 .DS_Store
 
-# Vim
+# Editors
 *.sw*
-
-# IntelliJ
 .idea/
 
 # Npm packages
@@ -12,3 +10,4 @@ node_modules/
 
 # Agents
 .playwright-mcp/
+**/.claude/settings.local.json
