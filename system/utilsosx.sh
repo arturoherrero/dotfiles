@@ -8,7 +8,7 @@ battery() {
 
 # cd to into the current Finder location
 cdf() {
-  target=$(osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)')
+  local target=$(osascript -e 'tell application "Finder" to if (count of Finder windows) > 0 then get POSIX path of (target of front Finder window as text)')
   if [ "$target" != "" ]; then
     cd "$target" || return
     pwd

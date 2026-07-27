@@ -35,7 +35,7 @@ __system_git_push() {
 
 # $ git clone
 __system_git_clone() {
-  name="${3:-${2##*/}}"
+  local name="${3:-${2##*/}}"
   command git "$@" && cd "${name%.git}" || return
 }
 
