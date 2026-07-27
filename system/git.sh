@@ -17,10 +17,10 @@ __system_git_push_confirmation_master_branch_force() {
   if [ "$(__system_git_current_branch)" == "$default" ]; then
     read -p "Force pushing to $default branch. Are you sure? " -r
     if [[ $REPLY =~ ^(yes|y|Y)$ ]]; then
-      git "$@"
+      command git "$@"
     fi
   else
-    git "$@"
+    command git "$@"
   fi
 }
 
@@ -29,14 +29,14 @@ __system_git_push() {
   if [[ "$*" == "push -f"* || "$*" == "push --force"* ]]; then
     __system_git_push_confirmation_master_branch_force "$@"
   else
-    git "$@"
+    command git "$@"
   fi
 }
 
 # $ git clone
 __system_git_clone() {
   name="${3:-${2##*/}}"
-  git "$@" && cd "${name%.git}" || return
+  command git "$@" && cd "${name%.git}" || return
 }
 
 __system_git() {
@@ -45,7 +45,7 @@ __system_git() {
   elif [[ "$1" == "clone" ]]; then
     __system_git_clone "$@"
   else
-    git "$@"
+    command git "$@"
   fi
 }
 
