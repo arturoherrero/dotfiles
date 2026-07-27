@@ -24,7 +24,7 @@
   pair = !git commit -t ~/.gitpair
   push-branch = "!f() { git push --set-upstream $1 $(git branch --show-current); }; f"
   remotes = remote -v
-  remove = "!f() { git branch --list \"$@\" | grep -v '^\\(master\\|main\\)$' | xargs git branch -D; }; f"
+  remove = "!f() { git branch --list \"$@\" | sed 's/^..//' | grep -v '^\\(master\\|main\\)$' | xargs git branch -D; }; f"
   remove-local-merged = !git merged | xargs git remove
   remove-remote-and-local = "!f() { git push origin --delete $1 && git remove $1; }; f"
   remove-remote-merged = "!f() { base=$(git rev-parse --verify origin/main >/dev/null 2>&1 && echo main || echo master); git remote update -p && git branch -r --merged origin/$base | grep origin | grep -v $base | cut -d/ -f2- | xargs git push origin --delete; }; f"
