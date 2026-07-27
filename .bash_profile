@@ -21,5 +21,5 @@ source ~/.profile
 source ~/.bash_settings
 
 for file in "$DOTFILES_DIR"/system_bash/*; do
-  source $file
+  source "$file"
 done

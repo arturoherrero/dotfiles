@@ -3,10 +3,11 @@ __system_dotfiles_dir() {
   dirname "$(readlink ~/.profile)"
 }
 
-export DOTFILES_DIR="$(__system_dotfiles_dir)"
+DOTFILES_DIR="$(__system_dotfiles_dir)"
+export DOTFILES_DIR
 
 for file in "$DOTFILES_DIR"/system/*; do
-  source $file
+  source "$file"
 done
 
 # rg / ripgrep

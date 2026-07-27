@@ -6,5 +6,5 @@ source ~/.profile
 source ~/.z_settings
 
 for file in "$DOTFILES_DIR"/system_zsh/*; do
-  source $file
+  source "$file"
 done
