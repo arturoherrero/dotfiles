@@ -53,7 +53,7 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
 au BufEnter * match ExtraWhitespace /\s\+$/
 au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-au InsertLeave * match ExtraWhiteSpace /\s\+$/
+au InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Strip trailing white spaces
 function! StripTrailingWhitespaces()
