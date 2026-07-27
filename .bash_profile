@@ -2,7 +2,15 @@
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
 # Homebrew
-test -e "/opt/homebrew/bin/brew" && eval "$(/opt/homebrew/bin/brew shellenv)"
+brew_bin="/opt/homebrew/bin/brew"
+brew_shellenv_cache="$HOME/.cache/brew_shellenv.sh"
+if [ -e "$brew_bin" ]; then
+  if [ ! -e "$brew_shellenv_cache" ] || [ "$brew_bin" -nt "$brew_shellenv_cache" ]; then
+    mkdir -p "$(dirname "$brew_shellenv_cache")"
+    "$brew_bin" shellenv > "$brew_shellenv_cache"
+  fi
+  source "$brew_shellenv_cache"
+fi
 export HOMEBREW_NO_ENV_HINTS=1
 
 # Bash completion 2
