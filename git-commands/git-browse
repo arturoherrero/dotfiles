@@ -9,8 +9,7 @@ __gitlab_browse() {
     merge_request_iid=$(curl --silent --header "PRIVATE-TOKEN: $GITLAB_API_PRIVATE_TOKEN" "https://gitlab.com/api/v4/merge_requests?state=opened&source_branch=$current_branch" | jq -r ".[].iid")
 
     if [ -n "$merge_request_iid" ]; then
-      project_url="$(git ls-remote --get-url | cut -c 5- | cut -d: -f2 | cut -d. -f1)"
-      open https://"$domain"/"$project_url"/-/merge_requests/"$merge_request_iid"
+      open https://"$domain"/"$project"/-/merge_requests/"$merge_request_iid"
     else
       __git_open_default
     fi
@@ -26,8 +25,9 @@ __git_open_default() {
 # $ git browse
 # Open the project page in the default browser.
 # Same behaviour as GitHub with https://github.com/github/hub
-domain="$(git ls-remote --get-url | cut -c 5- | cut -d: -f1)"
-project="$(git ls-remote --get-url | cut -c 5- | cut -d: -f2)"
+remote_url="$(git ls-remote --get-url | cut -c 5-)"
+domain="$(cut -d: -f1 <<< "$remote_url")"
+project="$(cut -d: -f2 <<< "$remote_url" | cut -d. -f1)"
 
 if [ "$domain" == "gitlab.com" ]; then
   __gitlab_browse
