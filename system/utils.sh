@@ -8,7 +8,7 @@ alias decompress="tar -xzf"
 
 # Find a file by name. $ fd name [directory]
 fd() {
-  find "${2-.}" -type f -path "*$1*" -exec bash -c 'printf "%s\n" "$1" | grep --color=auto "$2"' _ {} "$1" \;
+  find "${2-.}" -type f -path "*$1*" | grep --color=auto -- "$1"
 }
 
 # Short hash from regular hash
@@ -33,7 +33,7 @@ killit() {
 
 # Create a directory and change into it
 mcd() {
-  mkdir -p "$1" && cd "$_" || exit
+  mkdir -p "$1" && cd "$_" || return
 }
 alias mkdircd=mcd
 
