@@ -27,5 +27,3 @@ alias rm='trash'
 alias vi=vim
 
 alias where=which
-
-alias claude='claude --effort max'
