@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 
 autoload -Uz vcs_info
-precmd() { vcs_info }
-
 zstyle ':vcs_info:git:*' formats '%b'
 
 setopt PROMPT_SUBST
@@ -18,6 +16,11 @@ chpwd() {
   __system_prompt_git_dir=$(git rev-parse --git-dir 2>/dev/null)
 }
 chpwd
+
+# Skip vcs_info's own git forks entirely outside a repo.
+precmd() {
+  [[ -n $__system_prompt_git_dir ]] && vcs_info
+}
 
 __system_prompt_inside_git() {
   [[ -n $__system_prompt_git_dir ]] && echo "{%F{green}${vcs_info_msg_0_}%f}"
