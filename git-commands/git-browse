@@ -3,10 +3,12 @@
 # Open associated merge request based on the branch name.
 # Requires GITLAB_API_PRIVATE_TOKEN environment variable.
 __gitlab_browse() {
-  current_branch=$(git branch --show-current)
+  local current_branch=$(git branch --show-current)
+  local default_branch=$(git rev-parse --verify origin/main >/dev/null 2>&1 && echo main || echo master)
+  local merge_request_iid
 
-  if [ "$current_branch" != "master" ]; then
-    merge_request_iid=$(curl --silent --header "PRIVATE-TOKEN: $GITLAB_API_PRIVATE_TOKEN" "https://gitlab.com/api/v4/merge_requests?state=opened&source_branch=$current_branch" | jq -r ".[].iid")
+  if [ "$current_branch" != "$default_branch" ]; then
+    merge_request_iid=$(curl --silent --header "PRIVATE-TOKEN: $GITLAB_API_PRIVATE_TOKEN" "https://gitlab.com/api/v4/merge_requests?state=opened&source_branch=$current_branch" | jq -r ".[0].iid // empty")
 
     if [ -n "$merge_request_iid" ]; then
       open https://"$domain"/"$project"/-/merge_requests/"$merge_request_iid"
@@ -25,9 +27,9 @@ __git_open_default() {
 # $ git browse
 # Open the project page in the default browser.
 # Same behaviour as GitHub with https://github.com/github/hub
-remote_url="$(git ls-remote --get-url | cut -c 5-)"
-domain="$(cut -d: -f1 <<< "$remote_url")"
-project="$(cut -d: -f2 <<< "$remote_url" | cut -d. -f1)"
+remote_url="$(git ls-remote --get-url)"
+domain="$(sed -E 's#^(https?://|git@)([^/:]+)[:/].*#\2#' <<< "$remote_url")"
+project="$(sed -E 's#^(https?://[^/]+/|git@[^:]+:)##; s#\.git$##' <<< "$remote_url")"
 
 if [ "$domain" == "gitlab.com" ]; then
   __gitlab_browse
