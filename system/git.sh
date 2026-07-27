@@ -39,11 +39,37 @@ __system_git_clone() {
   command git "$@" && cd "${name%.git}" || return
 }
 
+# $ git co <branch>
+# If the branch is already checked out in another worktree, free it and
+# retry here. Relies on `git worktree remove` refusing on its own when that
+# worktree has uncommitted or untracked changes.
+__system_git_checkout() {
+  local out status wt_path
+  out=$(command git "$@" 2>&1)
+  status=$?
+
+  if [[ $status -ne 0 && $out == *"is already used by worktree at"* ]]; then
+    wt_path=$(sed -n "s/.*is already used by worktree at '\([^']*\)'.*/\1/p" <<< "$out")
+    if [[ -n $wt_path ]]; then
+      echo "Branch is checked out in worktree '$wt_path' — freeing it and retrying." >&2
+      if command git worktree remove "$wt_path"; then
+        command git "$@"
+        return
+      fi
+    fi
+  fi
+
+  [[ -n $out ]] && printf '%s\n' "$out"
+  return $status
+}
+
 __system_git() {
   if [[ "$1" == "push" ]]; then
     __system_git_push "$@"
   elif [[ "$1" == "clone" ]]; then
     __system_git_clone "$@"
+  elif [[ "$1" == "co" ]]; then
+    __system_git_checkout "$@"
   else
     command git "$@"
   fi
