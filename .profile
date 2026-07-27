@@ -9,8 +9,5 @@ for file in "$DOTFILES_DIR"/system/*; do
   source $file
 done
 
-# mise
-eval "$(/opt/homebrew/bin/mise hook-env)"
-
 # rg / ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
