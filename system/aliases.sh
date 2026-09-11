@@ -24,4 +24,6 @@ alias rm='trash'
 
 alias vi=vim
 
+alias opencode="opencode --auto"
+
 alias where=which
