@@ -24,6 +24,7 @@ alias rm='trash'
 
 alias vi=vim
 
+alias agy="agy --dangerously-skip-permissions"
 alias opencode="opencode --auto"
 
 alias where=which
