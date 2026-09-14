@@ -1,7 +1,9 @@
 # iTerm2 Shell Integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-eval "$(/opt/homebrew/bin/mise activate zsh)"
+if [ -x /opt/homebrew/bin/mise ]; then
+  eval "$(/opt/homebrew/bin/mise activate zsh)"
+fi
 source ~/.profile
 source ~/.z_settings
 

@@ -17,7 +17,9 @@ export HOMEBREW_NO_ENV_HINTS=1
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 # mise
-eval "$(/opt/homebrew/bin/mise activate bash)"
+if [ -x /opt/homebrew/bin/mise ]; then
+  eval "$(/opt/homebrew/bin/mise activate bash)"
+fi
 
 # fzf
 # CTRL-t = fzf select
