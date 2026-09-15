@@ -19,5 +19,6 @@ man() {
 # EDITOR
 export EDITOR=vim
 
-# Local binaries
+# Local binaries and applications
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.opencode/bin:$PATH"
