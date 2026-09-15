@@ -26,5 +26,6 @@ alias vi=vim
 
 alias agy="agy --dangerously-skip-permissions"
 alias opencode="opencode --auto"
+alias gemini="gemini --yolo"
 
 alias where=which
