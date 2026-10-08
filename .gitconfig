@@ -11,7 +11,7 @@
   co = checkout
   cob = checkout -b
   diffs = diff --staged
-  discard = "!git reset --hard origin/$(git branch --show-current)"
+  discard = "!f() { git reset --hard $(git rev-parse --verify --quiet @{u} || echo HEAD); }; f"
   head = checkout -- .
   hist = log --graph --pretty=format:'%C(yellow)%h%C(reset) -%C(auto)%d %s %C(green)(%cr) %C(bold blue)<%an>'
   integrate = "!f() { base=$(git rev-parse --verify origin/main >/dev/null 2>&1 && echo main || echo master); git checkout $base && git merge $1 && git push && git remove-remote-and-local $1; }; f"
