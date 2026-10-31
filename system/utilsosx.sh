@@ -5,6 +5,11 @@ battery() {
   pmset -g batt | grep -Eo "([0-9]+\%).*" | cut -f3 -d';' | cut -f2 -d' '
 }
 
+# Battery percentage
+battery_percentage() {
+  pmset -g batt | grep -o "[0-9]*%"
+}
+
 
 # cd to into the current Finder location
 cdf() {
