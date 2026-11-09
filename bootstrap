@@ -149,21 +149,10 @@ defaults -currentHost write com.apple.controlcenter.plist Bluetooth -int 18
 defaults write com.apple.dock mru-spaces -bool false
 
 
-# Add Documents folder to the Dock
-defaults write com.apple.dock persistent-others -array-add "\
-<dict>\
-  <key>tile-data</key>\
-    <dict>\
-      <key>file-data</key>\
-        <dict>\
-          <key>_CFURLString</key> <string>file:///$HOME/Documents/</string>\
-          <key>_CFURLStringType</key> <integer>15</integer>\
-        </dict>\
-      <key>file-type</key> <integer>2</integer>\
-      <key>showas</key> <integer>1</integer>\
-    </dict>\
-  <key>tile-type</key> <string>directory-tile</string>\
-</dict>"
+# Put Documents before Downloads in the Dock
+defaults write com.apple.dock persistent-others -array \
+  "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///$HOME/Documents/</string><key>_CFURLStringType</key><integer>15</integer></dict><key>file-type</key><integer>2</integer><key>showas</key><integer>1</integer></dict><key>tile-type</key><string>directory-tile</string></dict>" \
+  "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>file:///$HOME/Downloads/</string><key>_CFURLStringType</key><integer>15</integer></dict><key>file-type</key><integer>2</integer><key>showas</key><integer>1</integer></dict><key>tile-type</key><string>directory-tile</string></dict>"
 
 # Remove items located on the Applications side of the Dock
 defaults write com.apple.dock persistent-apps -array
